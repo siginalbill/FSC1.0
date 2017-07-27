@@ -6,80 +6,60 @@
     android:background="@color/white"
     android:id="@+id/Activity_EducationNews_Main_ListView_Item"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Id"
-            android:text="id"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="10dp"
+        <ImageView
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_ImageView"
+            android:layout_width="100dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/test" />
 
-            />
         <TextView
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Title"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="10dp"
             android:text="title"
             android:textColor="@color/black"
-            android:layout_marginLeft="10dp"
-            android:textSize="18dp"
-            android:layout_below="@+id/Activity_EducationNews_Main_ListView_Item_Id" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Contentshow"
-            android:text="内容简介:"
-            android:textColor="@color/black"
-            android:layout_marginTop="5dp"
-            android:textSize="13dp"
-            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Title"
-            android:layout_marginLeft="10dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Content"
-            android:text="content"
-            android:textColor="@color/black"
-            android:layout_marginTop="5dp"
-            android:textSize="13dp"
-            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Title"
-            android:layout_marginLeft="70dp"
-            />
+            android:textSize="18dp" />
+
+
 
         <TextView
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView_Item_dateshow"
-            android:text="时间:"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Title"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="5dp"
+            android:text="content"
             android:textColor="@color/black"
-            android:layout_marginTop="25dp"
-            android:textSize="14dp"
-            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Contentshow"
-            android:layout_marginLeft="10dp"
-            />
+            android:textSize="13dp" />
+
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/Activity_EducationNews_Main_ListView_Item_date"
-            android:text="date and time"
-            android:textColor="@color/black"
-            android:layout_marginTop="25dp"
-            android:textSize="14dp"
-            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Contentshow"
-            android:layout_marginLeft="50dp"
-            />
-        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:text="date and time"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Content"
+        />
+
+        <ImageView
             android:id="@+id/Activity_EducationNews_Main_ImageView_PartingLine"
-            android:background="@drawable/partingline"
-            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_dateshow"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_date"
+            android:background="@drawable/partingline" />
 
     </RelativeLayout>
 

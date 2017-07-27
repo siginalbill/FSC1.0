@@ -8,6 +8,8 @@
     android:id="@+id/Activity_EducationNews_Main"
     >
 
+
+
     <LinearLayout
         android:id="@+id/Activity_LatestNews_LinearLayout_BlueBar"
         android:layout_width="match_parent"
@@ -66,24 +68,19 @@
 
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
 
         >
+
         <ListView
-            tools:listitem="@layout/activity_educationnews_main_listview"
+            android:id="@+id/Activity_EducationNews_Main_ListView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Activity_EducationNews_Main_ListView"
-            >
-        </ListView>
+            tools:listitem="@layout/activity_educationnews_main_listview"></ListView>
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>
