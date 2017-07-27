@@ -122,7 +122,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_height="30dp"
                     android:id="@+id/Activity_Mark_Mainpage_ImageView_Book"
-                    android:background="@drawable/book"
+                    android:background="@drawable/book_1"
 
                     />
 
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/Activity_Mark_Mainpage_ImageView_Right"
-                    android:background="@drawable/right1"
+                    android:background="@drawable/right2"
                     android:layout_marginRight="20dp"
                     />
             </LinearLayout>

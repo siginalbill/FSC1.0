@@ -18,11 +18,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="家长姓名：" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="XXX" />
 	</LinearLayout>
 	
@@ -40,11 +42,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="家长联系方式：" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="XXXXXXXX" />
 	</LinearLayout>
 
@@ -62,11 +66,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="学生姓名：" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="XXX" />
 	</LinearLayout>
 	
@@ -84,11 +90,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="学生班级：" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="XXX" />
 	</LinearLayout>
 
@@ -106,11 +114,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+         android:textColor="@color/black"
         android:text="学生学号：" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColor="@color/black"
         android:text="XXXXXXXXXX" />
 	</LinearLayout>
 
@@ -129,6 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView5"
+        android:textColor="@color/black"
         android:text="审核结果：" />
     
         <TextView
@@ -136,6 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/textView6"
+        android:textColor="@color/black"
         android:layout_marginLeft="20dp"
         android:text="通过" />
         
@@ -145,12 +157,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_below="@+id/imageView7"
+        android:textColor="@color/black"
         android:layout_centerHorizontal="true" />
      
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toLeftOf="@+id/radioButton2"
+        android:textColor="@color/black"
         android:layout_marginLeft="40dp"
         android:text="不通过" />
     
@@ -160,6 +174,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/radioButton1"
         android:layout_alignBottom="@+id/radioButton1"
+        android:textColor="@color/black"
         android:layout_marginLeft="14dp"
         android:layout_toRightOf="@+id/textView2" />
     </LinearLayout>
@@ -177,11 +192,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:textColor="@color/black"
         android:text="备注：" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+         android:textColor="@color/black"
         android:ems="10" >
     </EditText>
        
@@ -194,11 +211,12 @@
     
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginTop="23dp"
-       android:layout_gravity="center"
+       	android:layout_gravity="center"
+       
        android:background="@drawable/shape"
        android:textColor="@color/white"
-        android:text="提交审核" />
+       android:text="提交审核" />
 
 </LinearLayout>

@@ -118,7 +118,7 @@ android:id="@+id/Activity_LatestNews_LinearLayout_Body_Message_Left"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
-            android:background=""
+            android:background="@drawable/parent_head"
 
             />
 

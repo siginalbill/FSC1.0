@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:id="@+id/Acticity_Mark_Student_Page"
+    >
+    <LinearLayout
+        android:id="@+id/Activity_Mark_Student_Page_LinearLayout_BlueBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#0e7aac"
+
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dip"
+            android:id="@+id/Acticity_Mark_Student_Page_LinearLayout_Left"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/Activity_Mark_Student_Page_ImageView_Left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/left"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/Activity_Mark_Student_Page_LinearLayout_More"
+            android:layout_gravity="end"
+            >
+
+            <ImageView
+                android:id="@+id/Activity_LatestImageView_Bell"
+                android:layout_width="25dp"
+
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bell" />
+
+            <ImageView
+                android:id="@+id/Activity_Mark_Student_Page_ImageView_People"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/people" />
+
+            <ImageView
+                android:id="@+id/Activity_Mark_Student_Page_ImageView_More"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Activity_Mark_Student_Page_Leader1"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/Activity_Mark_Student_Page_TextView_LatestNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:text="成绩管理"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/partingline"
+            android:id="@+id/Activity_Mark_Student_Page_ImageView_PartingLine1"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Activity_Mark_Student_Page_Leader2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/Activity_Mark_Student_Page_TextView_LatestNews2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:text="入学考试"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+
+    >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/Acticity_Mark_Student_Page_TextView_id"
+    android:text="学号:"
+    android:textSize="17dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="7dp"
+    android:textColor="@color/black"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Acticity_Mark_Student_Page_TextView_name"
+        android:text="姓名:"
+
+        android:layout_marginLeft="5dp"
+        android:textSize="17dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Acticity_Mark_Student_Page_TextView_sex"
+
+        android:layout_marginLeft="5dp"
+        android:text="性别:"
+        android:textSize="17dp"
+        android:layout_marginTop="7dp"
+        android:textColor="@color/black"
+        />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Acticity_Mark_Student_Page_TextView_Chinese"
+            android:layout_marginLeft="5dp"
+            android:text="语文:"
+            android:textSize="17dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Acticity_Mark_Student_Page_TextView_Maths"
+            android:text="数学:"
+            android:layout_marginLeft="5dp"
+            android:textSize="17dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/Acticity_Mark_Student_Page_TextView_English"
+            android:text="英语:"
+            android:textSize="17dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/Acticity_Mark_Student_Page_TextView_classrank"
+            android:text="班级排名:"
+            android:textSize="17dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Acticity_Mark_Student_Page_TextView_graderank"
+            android:text="年级排名:"
+            android:textSize="17dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+</LinearLayout>

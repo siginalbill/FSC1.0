@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="#4e80ad"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/activity_bianjipingyu_button_fanhui"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#4e80ad"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:id="@+id/activity_bianjipingyu_biaozhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="200"
+            android:padding="1dp"  
+            android:text="                   编辑评语"
+            android:textColor="@color/white"
+            android:textSize="23sp" 
+            android:layout_gravity="center"
+            />
+
+        <Button
+            android:id="@+id/activity_bianjipingyu_button_fabu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="发布" 
+            android:textColor="@color/white"
+            android:background="#4e80ad"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_bianjipingyu_edittext_shuruxuehao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="15"
+        android:hint="请输入所要评论学生的学号"
+        android:textSize="13sp"
+        android:layout_gravity="right"
+        
+        android:paddingBottom="3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+    <TextView
+        android:id="@+id/activity_bianjipingyu_textview_biaoti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="标题:" 
+        android:textSize="20sp"
+        android:layout_weight="10"
+        android:gravity="right"
+        />
+
+    <EditText
+        android:id="@+id/activity_bianjipingyu_edittext_biaoti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="13"
+        android:hint="请输入标题"
+        android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_bianjipingyu_edittext_zhengwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" 
+        android:hint="请输入正文"
+        android:textSize="15sp"
+        android:padding="5dp"
+        
+        
+        >
+
+        <requestFocus />
+    </EditText>
+
+</LinearLayout>

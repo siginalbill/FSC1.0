@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/Activity_EducationNews_Main_ListView_Item"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Id"
+            android:text="id"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="10dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Title"
+            android:text="title"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:layout_below="@+id/Activity_EducationNews_Main_ListView_Item_Id" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Contentshow"
+            android:text="内容简介:"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="13dp"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Title"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_Content"
+            android:text="content"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textSize="13dp"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Title"
+            android:layout_marginLeft="70dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_dateshow"
+            android:text="时间:"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            android:textSize="14dp"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Contentshow"
+            android:layout_marginLeft="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ListView_Item_date"
+            android:text="date and time"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            android:textSize="14dp"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_Contentshow"
+            android:layout_marginLeft="50dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_EducationNews_Main_ImageView_PartingLine"
+            android:background="@drawable/partingline"
+            android:layout_below="@id/Activity_EducationNews_Main_ListView_Item_dateshow"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
