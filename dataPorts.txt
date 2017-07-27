@@ -1,0 +1,161 @@
+//角色
+{
+    "parent": 0,
+    "student": 1,
+    "teacher": 2,
+    "leader": 3
+}
+//出勤
+{
+    "attendence_flag":0 //0:正常 1:缺勤 2:迟到 3:早退
+}
+
+
+//家长注册 POST /servlet/Regist
+{
+    "parent_tel": "010-13843838748",
+    "parent_pwd": "test123456",
+    "flag": 0,
+    "action":"regist"
+}
+//response:
+{
+    "regist_flag": 1 //1:注册成功，0:失败
+    "reason": 0 //0:成功,1:手机号已被注册，2:others
+}
+
+
+//家长登录 POST /servlet/Login
+{
+    "username": "010-13843838748",
+    "password": "test123456",
+    "flag": 0,
+    "action": "login"
+}
+//response:
+{
+    "login_flag": 1, //0:账号或密码错误；1：登陆成功
+    "user_status": 0, //0:未绑定学生或审核未通过；1:显示正常主界面
+    "user_id": 1001, //id、flag和密码保存在application里用于请求数据
+    "user_trueName": "王二",
+    "user_pwd":"test123456",
+    "user_flag":0 //家长
+    "user_img":null //
+    "student": { //非家长则为null
+        "student_id": 1001,
+        "student_name": "王小二"
+    }
+}
+
+
+//主页 POST /servlet/MainPage
+{
+    "user_id": 1001,
+    "user_flag": 0,
+    "user_pwd": "test123456",
+    "action": "getMessage"
+}
+//response:
+{
+    "user_name": "王二",
+    "user_flag": 0
+}
+
+//POST 提交审核 /servlet/ReceiveCheck
+{
+    "school_name": "成都市郫都区团结红星小学校",
+    "class_name": "三年二班",
+    "student_name": "李亦凡",
+    "student_num": 20130302005,
+    "uncheck_comment": "我是他爹",
+    "parent_name": "李毅碟",
+    "parent_tel": "010-13843838748"
+}
+//response:
+{
+    "check_flag": 1 //1:提交，0:失败
+    "reason": 0 //0:成功,1:更新成功,2:已审核或其他问题请联系老师或管理员
+}
+
+//POST 老师查看审核  /servlet/CheckList
+{
+    "user_id": 1001,
+    "user_flag": 2,
+    "user_pwd": "test123456",
+    "action": "checklist"
+}
+//response:
+{
+    "uncheck": [
+        {
+            "parent_name": "王二",
+            "parent_tel": "010-13843838748",
+            "student_num": 20130302001,
+            "student_name": "王小二",
+            "parent_img": "url",
+            "comment": "我是他爹"
+        },
+        {
+            "parent_name": "王二",
+            "parent_tel": "010-13843838748",
+            "student_num": 20130302001,
+            "student_name": "王小二",
+            "parent_img": "url",
+            "comment": "我是他爹"
+        }
+    ],
+    "checked": [
+        {
+            "parent_name": "王二",
+            "parent_tel": "010-13843838748",
+            "student_num": 20130302001,
+            "student_name": "王小二",
+            "parent_img": "url",
+            "comment": "老师填写"
+        },
+        {
+            "parent_name": "王二",
+            "parent_tel": "010-13843838748",
+            "student_num": 20130302001,
+            "student_name": "王小二",
+            "parent_img": "url",
+            "comment": "是他爹"
+        },
+        {
+            "parent_name": "王二",
+            "parent_tel": "010-13843838748",
+            "student_num": 20130302001,
+            "student_name": "王小二",
+            "parent_img": "url",
+            "comment": "没错了"
+        }
+    ]
+}
+
+//POST 老师确认审核通过 /servlet/Checked
+{
+    "username": "3838748",
+    "password": "test123456",
+    "flag": 2,
+    "action": "checked",
+    "student_num": "20130302001",
+    "parent_tel": "13843838748",
+    "comment": "累死了"
+}
+//response:
+{
+    "check_flag": 1 //1:提交，0:失败
+    "reason": 0 //0:成功,1:已审核或其他问题请联系老师或管理员
+}
+
+//GET 获取教育资讯 /servlet/News
+{
+    "news": [
+        {
+            "news_id": 1000,
+            "news_title": "致同学们的一封信",
+            "news_date": "2017-07-26 11:46:06.0",
+            "news_content": "请你学会规划自己的生活，从人生目标到衣食住行。大学与高中最大的区别就在于完全自主。高中时，老师会布置每天的作业，父母会安排每天的饮食，你只需要按部就班地完成。上了大学以后，没有人叮嘱你今天该看哪些书，该添几件衣服。你要学会自己制定学习计划，自己安排生活起居。高中时，你唯一的目标就是考个好大学。而现在，你要重新思考自己的人生理想，慎重规划未来的人生目标。\n请你永远不要失去生活的热情，无论顺遂或是艰辛。春花春鸟，秋月秋蝉，夏云暑雨，冬月祁寒，四时物候变化，岁月历久弥新。愿你在柳树抽出的嫩芽里、在一季一季的花开中不断获得细小的惊喜与愉悦。愿你关心粮食和蔬菜，关心图书馆前的灰喜鹊，关心宿舍楼下的流浪猫。愿你做一个热情的、有趣的人，既有论文与实验，也有诗歌和远方。\nLife is a journey, \nnot a destination.\n人生是一段难得的旅程，\n愿君砥砺前行，\n尽赏沿途花开。\n"
+        }
+    ]
+}
