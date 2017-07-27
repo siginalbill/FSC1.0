@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/Activity_LatestNews_LinearLayout_BlueBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#0e7aac"
+
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dip"
+            android:id="@+id/Acticity_LatestNews_LinearLayout_Left"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/Activity_LatestImageView_Left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/left"
+                />
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/Activity_LatestNews_LinearLayout_More"
+    android:layout_gravity="end"
+    >
+
+    <ImageView
+        android:id="@+id/Activity_LatestImageView_Bell"
+        android:layout_width="25dp"
+
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bell" />
+
+    <ImageView
+        android:id="@+id/Activity_LatestNews_ImageView_People"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/people" />
+
+    <ImageView
+        android:id="@+id/Activity_LatestNews_ImageView_More"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/add" />
+</LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Activity_LatestNews_Leader1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:id="@+id/Activity_LatestNews_TextView_LatestNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:text="最新消息"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/Activity_LatestNews_LinearLayout_Body"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_weight="2"
+          android:id="@+id/Activity_LatestNews_LinearLayout_Body_Message"
+          android:orientation="horizontal"
+          >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+android:id="@+id/Activity_LatestNews_LinearLayout_Body_Message_Left"
+    android:layout_weight="1"
+    >
+    <RelativeLayout
+        android:id="@+id/Activity_LatestNews_RelativeLayout_Body_Message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/Activity_LatestNews_ImageView_Head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background=""
+
+            />
+
+        <TextView
+            android:id="@+id/Activity_LatestNews_TextView_Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:text="学生家长第100889号"
+            android:textSize="12dp"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/Activity_LatestNews_TextView_Date"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:layout_below="@id/Activity_LatestNews_TextView_Head"
+            android:text="07月26日 15：:23"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Activity_LatestNews_ImageView_Head"
+            android:layout_marginLeft="5dp"
+            android:text="请对我的孩子严加管教。"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:id="@+id/Activity_LatestNews_TextView_Message1"
+            />
+    </RelativeLayout>
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Activity_LatestNews_LinearLayout_Body_Message_Right"
+    android:orientation="horizontal"
+    android:layout_weight="3"
+    android:layout_gravity="right"
+    >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="回复"
+        android:textSize="11dp"
+        />
+</LinearLayout>
+      </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/Activity_LatestNews_LinearLayout_Return"
+            android:orientation="horizontal"
+            android:background="@color/lightgrey"
+            >
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/Activity_LatestNews_TextView_Return"
+    android:textColor="@color/black"
+    android:layout_gravity="center"
+    android:text="张老师：以下孩子上课时间开小差：xxx,xxx,xxx..."
+    android:layout_marginLeft="5dp"
+    />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

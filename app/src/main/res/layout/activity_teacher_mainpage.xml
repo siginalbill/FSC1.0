@@ -249,7 +249,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/parent" />
+                        android:background="@drawable/parent_head" />
 
                     <TextView
                         android:id="@+id/Activity_Teacher_Mainpage_TextView_Function8"
