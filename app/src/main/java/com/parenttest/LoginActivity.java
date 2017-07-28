@@ -70,7 +70,7 @@ public class LoginActivity extends Activity {
                 }
                 else if(flag==3)
                 {
-                    Intent intent=new Intent(LoginActivity.this, ParentMainPageActivity.class);
+                    Intent intent=new Intent(LoginActivity.this, Mainpage_leader.class);
                     startActivity(intent);
                 }
                 else
@@ -91,7 +91,7 @@ public class LoginActivity extends Activity {
                 et_pwd = (EditText) findViewById(R.id.activity_login_edittext_mima);
                 String u_id = (String) et_id.getText().toString();
                 String u_pwd = (String) et_pwd.getText().toString();
-                int u_flag = 0;
+                int u_flag = 3;
                 String u_action = "login";
                 if (true) {
                     final JSONObject loginJson = new JSONObject();

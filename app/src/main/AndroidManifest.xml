@@ -27,6 +27,7 @@
         <activity
             android:name="com.parenttest.ParentMainPageActivity"
             android:label="@string/title_activity_parent_main_page"></activity>
+        <activity android:name="com.parenttest.Mainpage_leader"></activity>
     </application>
 
 </manifest>
