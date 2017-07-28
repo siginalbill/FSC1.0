@@ -22,5 +22,6 @@
     <string name="Notice_Edit_Body2">Body2</string>
     <string name="Notice_Edit_Picture">添加图片</string>
     <string name="Notice_Edit_Cancel">取消发送</string>
+    <string name="title_activity_parent_main_page">ParentMainPageActivity</string>
 
 </resources>

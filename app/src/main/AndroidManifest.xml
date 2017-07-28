@@ -12,19 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name="com.parenttest.NewsActivity">
-
-        </activity>
-        <activity android:name="com.parenttest.ParentTestActivity"></activity>
+        <activity android:name="com.parenttest.NewsActivity"></activity>
+        <activity android:name="com.parenttest.ParentTestActivity" />
         <activity
             android:name="com.parenttest.RegisterActivity"
-            android:label="@string/title_activity_register" >
+            android:label="@string/title_activity_register">
+        </activity>
+        <activity android:name="com.parenttest.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.parenttest.LoginActivity"></activity>
+        <activity
+            android:name="com.parenttest.ParentMainPageActivity"
+            android:label="@string/title_activity_parent_main_page"></activity>
     </application>
 
 </manifest>

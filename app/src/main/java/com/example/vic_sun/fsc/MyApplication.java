@@ -24,7 +24,4 @@ public class MyApplication extends Application{
         loginUser.setAction(user.getAction());
     }
 
-    public void userLogout(){
-        loginUser = new ApplicationUser();
-    }
 }
