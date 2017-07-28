@@ -2,14 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp"
-    android:background="@color/white">
+    android:padding="4dp" >
 
     <ImageView
         android:id="@+id/activity_pingyu_adapter_pic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/parent_head" />
+        android:src="@drawable/ic_launcher" />
 
     <TextView
         android:id="@+id/activity_pingyu_adapter_name"
@@ -18,8 +17,8 @@
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/activity_pingyu_adapter_pic"
         android:text="张三家长"
-        android:textSize="15sp" 
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/activity_pingyu_adapter_time"
@@ -29,8 +28,8 @@
         android:layout_alignLeft="@id/activity_pingyu_adapter_name"
         android:layout_toRightOf="@id/activity_pingyu_adapter_pic"
         android:text="2017/7/27"
-        android:textSize="15sp" 
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/activity_pingyu_adapter_content"

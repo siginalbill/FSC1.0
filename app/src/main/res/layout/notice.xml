@@ -1,0 +1,48 @@
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+      xmlns:tools="http://schemas.android.com/tools"  
+        android:id="@+id/LinearLayout"  
+        android:layout_width="fill_parent"  
+        android:layout_height="fill_parent"  
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+        android:id="@+id/Notice_LinearLayout_TitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#cc0000"
+
+        android:orientation="horizontal">
+       
+        <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/Notice_ImageView_Left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/notice_leftarrow"
+                />
+
+        <TextView
+            android:id="@+id/Notice_TextView_Title"
+            android:layout_width="240dp"
+            android:layout_height="35dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="7sp"
+            android:paddingTop="8sp"
+            android:text="@string/Notice_Title"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+   </LinearLayout>
+       
+      <ListView
+         android:id="@+id/Homework_ListView_WorkList"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" >
+     </ListView>
+        
+      
+    </LinearLayout>  

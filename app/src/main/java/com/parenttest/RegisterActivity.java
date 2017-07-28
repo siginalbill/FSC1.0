@@ -8,6 +8,7 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vic_sun.fsc.R;
@@ -22,18 +23,26 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class RegisterActivity extends Activity {
-    Button btn;
-    EditText et_phone, et_password1, et_password2;
+    Button btn_regist,btn_check;
+    EditText et_phone, et_password1, et_password2, et_check;
+    TextView tv_login;
     Toast tst;
     Intent intent;
     Handler handler;
+    String check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rigister);
 
-        btn = (Button) findViewById(R.id.Rigister_Button_Rigister);
-        btn.setOnClickListener(new MyClickListener());
+        MyClickListener mc = new MyClickListener();
+
+        btn_regist = (Button) findViewById(R.id.Rigister_Button_Rigister);
+        btn_check = (Button) findViewById(R.id.Rigister_Button_getPIN);
+        btn_regist.setOnClickListener(mc);
+        btn_check.setOnClickListener(mc);
+        tv_login = (TextView) findViewById(R.id.Rigister_TextView_Return);
+        tv_login.setOnClickListener(mc);
 
         handler = new Handler()
         {
@@ -47,11 +56,27 @@ public class RegisterActivity extends Activity {
                     intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
-                else
+                else if (msg.what == 0x122)
                 {
-                    Toast.makeText(RegisterActivity.this,
-                            "注册失败", Toast.LENGTH_LONG)
-                            .show();
+                    tst = Toast.makeText(RegisterActivity.this, "该手机号已被注册", Toast.LENGTH_SHORT);
+                    tst.show();
+                }
+                else if (msg.what == 0x121)
+                {
+                    tst = Toast.makeText(RegisterActivity.this, "服务异常", Toast.LENGTH_SHORT);
+                    tst.show();
+                }
+                else if (msg.what == 0x120) {
+                    tst = Toast.makeText(RegisterActivity.this, "密码不一致", Toast.LENGTH_SHORT);
+                    tst.show();
+                }
+                else if (msg.what == 0x199) {
+                    tst = Toast.makeText(RegisterActivity.this, "验证码错误", Toast.LENGTH_SHORT);
+                    tst.show();
+                }
+                else{
+                    tst = Toast.makeText(RegisterActivity.this, "注册失败", Toast.LENGTH_SHORT);
+                    tst.show();
                 }
             }
         };
@@ -64,11 +89,13 @@ public class RegisterActivity extends Activity {
                 et_phone = (EditText) findViewById(R.id.Rigister_EditText_Phonenum);
                 et_password1 = (EditText) findViewById(R.id.Rigister_EditText_EnterPassword);
                 et_password2 = (EditText) findViewById(R.id.Rigister_EditText_ConfirmPassword);
+                et_check = (EditText) findViewById(R.id.Rigister_EditText_PIN);
 
                 String phonenum = (String) et_phone.getText().toString();
                 String pass1 = (String) et_password1.getText().toString();
-                String pass2 = (String) et_password1.getText().toString();
-                if (pass1.equals(pass2)) {
+                String pass2 = (String) et_password2.getText().toString();
+                String s_check = (String) et_check.getText().toString();
+                if (pass1.equals(pass2) && check.equals(s_check)) {
                     final JSONObject registJson = new JSONObject();
                     try {
                         registJson.put("parent_tel", phonenum);
@@ -98,7 +125,7 @@ public class RegisterActivity extends Activity {
                                 if (conn.getResponseCode() == 200) {
 
                                 } else {
-                                    handler.sendEmptyMessage(0x122);
+                                    handler.sendEmptyMessage(0x121);
                                 }
                                 InputStream inStream = conn.getInputStream();
                                 ByteArrayOutputStream outStream = new ByteArrayOutputStream();
@@ -115,14 +142,12 @@ public class RegisterActivity extends Activity {
                                 }
                                 else{
                                     if (rJson.getInt("reason") == 1){
+
                                         handler.sendEmptyMessage(0x122);
-                                        tst = Toast.makeText(RegisterActivity.this, "该手机号已被注册", Toast.LENGTH_SHORT);
-                                        tst.show();
                                     }
                                     else{
-                                        handler.sendEmptyMessage(0x122);
-                                        tst = Toast.makeText(RegisterActivity.this, "服务异常", Toast.LENGTH_SHORT);
-                                        tst.show();
+
+                                        handler.sendEmptyMessage(0x121);
                                     }
                                 }
                             } catch (Exception e) {
@@ -132,12 +157,18 @@ public class RegisterActivity extends Activity {
                     }.start();
 
                 }
+                else if (!pass1.equals(pass2)){
+                    handler.sendEmptyMessage(0x120);
+                }
                 else {
-                    tst = Toast.makeText(RegisterActivity.this, "密码不一致", Toast.LENGTH_SHORT);
-                    tst.show();
+                    handler.sendEmptyMessage(0x199);
                 }
 
-            } else {
+            } else if (V.getId() == R.id.Rigister_Button_getPIN) {
+                check = String.valueOf((int)((Math.random()*9+1)*100000));
+                btn_check.setText(check);
+            }
+            else if (V.getId() == R.id.Rigister_TextView_Return) {
                 intent = new Intent(RegisterActivity.this, LoginActivity.class);
                 startActivity(intent);
             }

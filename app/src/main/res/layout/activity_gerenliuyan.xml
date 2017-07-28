@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#4e80ad"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/activity_gerenliuyan_imagebutton_fanhui"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#4e80ad"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left" />
+
+        <TextView 
+            android:id="@+id/textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            
+            />
+
+        <Button
+            android:id="@+id/activity_gerenliuyan_button_huifu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="回复" 
+            android:textColor="@color/white"
+            android:background="#4e80ad"
+            android:textSize="23dp"
+            android:gravity="center"
+            android:padding="2dp"
+            />
+
+    </LinearLayout>
+
+    <ListView 
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/activity_gerenliuyan_listview_geren"
+        android:padding="10dp"
+        >
+           
+    </ListView>
+
+    
+
+    <ImageView
+        android:id="@+id/activity_gerenliuyan_imageview_fengexian"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:src="@drawable/pic2" 
+        android:scaleType="matrix"
+        android:layout_gravity="center"
+        />
+
+    <ListView
+        android:id="@+id/activity_gerenliuyan_listview_huifu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>
+

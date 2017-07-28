@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    android:background="@color/white">
+
+       <ImageView
+        android:id="@+id/activity_liuyan_yuyin_imageview_touxiang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/parent_head" />
+
+    <TextView
+        android:id="@+id/activity_liuyan_yuyin_textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/activity_liuyan_yuyin_imageview_touxiang"
+        android:text="张三家长"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/activity_pingyu_yuyin_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/activity_liuyan_yuyin_imageview_touxiang"
+        android:layout_alignLeft="@id/activity_liuyan_yuyin_textview_name"
+        android:layout_toRightOf="@id/activity_liuyan_yuyin_imageview_touxiang"
+        android:text="2017/7/27"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_liuyan_yuyin_imageview_touxiang" >
+
+        <ImageButton
+            android:id="@+id/activity_liuyan_yuyin_imagebutton_laba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_laba"
+            android:background="@color/white" 
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageView
+            android:id="@+id/activity_liuyan_yuyin_imageview_qipao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_yuyin" 
+            android:layout_weight="4"
+            android:layout_gravity="left"
+            android:padding="5dp"
+            android:scaleType="fitStart"
+            
+            />
+        
+    </LinearLayout>
+
+</RelativeLayout>
