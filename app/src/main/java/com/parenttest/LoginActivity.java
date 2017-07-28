@@ -7,8 +7,10 @@ import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,6 +36,8 @@ public class LoginActivity extends Activity {
     TextView tv_regist;
     MyApplication mApplication;
     ApplicationUser user;
+    Spinner sp_choice;
+    int u_flag = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,18 @@ public class LoginActivity extends Activity {
         btn.setOnClickListener(mc);
         tv_regist = (TextView) findViewById(R.id.Button_Login) ;
         btn.setOnClickListener(mc);
+        sp_choice = (Spinner) findViewById(R.id.activity_login_spinner);
+        sp_choice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                u_flag = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         mApplication = (MyApplication) getApplication();
         handler = new Handler()
@@ -76,7 +92,7 @@ public class LoginActivity extends Activity {
                 else
                 {
                     Toast.makeText(LoginActivity.this,
-                            "登录失败", Toast.LENGTH_LONG)
+                            "登录失败,请检查账号或密码", Toast.LENGTH_LONG)
                             .show();
                 }
             }
@@ -89,9 +105,18 @@ public class LoginActivity extends Activity {
             if (V.getId() == R.id.Button_Login) {
                 et_id = (EditText) findViewById(R.id.activity_login_edittext_zhanghao);
                 et_pwd = (EditText) findViewById(R.id.activity_login_edittext_mima);
+                TextView tv_regist = (TextView) findViewById(R.id.activity_login_button_zhuce);
+                tv_regist.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent=new Intent(LoginActivity.this, RegisterActivity.class);
+                        startActivity(intent);
+                    }
+                });
+
                 String u_id = (String) et_id.getText().toString();
                 String u_pwd = (String) et_pwd.getText().toString();
-                int u_flag = 3;
+
                 String u_action = "login";
                 if (true) {
                     final JSONObject loginJson = new JSONObject();
@@ -135,15 +160,16 @@ public class LoginActivity extends Activity {
                                 inStream.close();
                                 String returnString = new String(outStream.toByteArray());
                                 JSONObject rJson = new JSONObject(returnString);
-                                user = new ApplicationUser();
-                                user.setUser_id(rJson.getLong("user_id"));
-                                user.setUser_pwd(rJson.getString("user_pwd"));
-                                user.setUser_flag(rJson.getInt("user_flag"));
-                                user.setAction("login");
+
                                 if (rJson.getInt("login_flag") == 1) {
 
-                                    handler.sendEmptyMessage(user.getUser_flag());
+                                    user = new ApplicationUser();
+                                    user.setUser_id(rJson.getLong("user_id"));
+                                    user.setUser_pwd(rJson.getString("user_pwd"));
+                                    user.setUser_flag(rJson.getInt("user_flag"));
+                                    user.setAction("login");
                                     mApplication.setUserLogin(user);
+                                    handler.sendEmptyMessage(user.getUser_flag());
                                 } else {
                                     handler.sendEmptyMessage(4);
                                 }

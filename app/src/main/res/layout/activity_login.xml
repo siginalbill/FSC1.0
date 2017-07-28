@@ -45,6 +45,7 @@
         android:ems="12"
         android:layout_gravity="center_horizontal"
         android:background="@color/white"
+        android:entries="@array/login_users"
         />
   <EditText
         android:id="@+id/activity_login_edittext_mima"
@@ -88,11 +89,11 @@
 
       <TextView
           android:layout_below="@id/Button_Login"
-      android:id="@+id/activity_login_button_zhuce"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="快速注册" 
-      android:layout_marginTop="10dp"
+        android:id="@+id/activity_login_button_zhuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快速注册"
+        android:layout_marginTop="40dp"
           android:textSize="18dp"
       android:layout_centerInParent="true"
 

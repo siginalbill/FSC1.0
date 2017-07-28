@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="login_users">
+        <item>家长登录</item>
+        <item>学生登录</item>
+        <item>老师登录</item>
+        <item>领导登录</item>
+    </string-array>
+</resources>
