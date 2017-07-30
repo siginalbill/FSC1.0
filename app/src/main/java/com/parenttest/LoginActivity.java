@@ -89,6 +89,12 @@ public class LoginActivity extends Activity {
                     Intent intent=new Intent(LoginActivity.this, Mainpage_leader.class);
                     startActivity(intent);
                 }
+                else if(flag==5)
+                {
+                    //未绑定家长
+                    Intent intent=new Intent(LoginActivity.this, Mainpage_litter_parent.class);
+                    startActivity(intent);
+                }
                 else
                 {
                     Toast.makeText(LoginActivity.this,
@@ -169,7 +175,13 @@ public class LoginActivity extends Activity {
                                     user.setUser_flag(rJson.getInt("user_flag"));
                                     user.setAction("login");
                                     mApplication.setUserLogin(user);
-                                    handler.sendEmptyMessage(user.getUser_flag());
+                                    if ((user.getUser_flag() == 0) && (rJson.getInt("user_status") == 0)){
+                                        handler.sendEmptyMessage(5);
+                                    }
+                                    else {
+                                        handler.sendEmptyMessage(user.getUser_flag());
+                                    }
+
                                 } else {
                                     handler.sendEmptyMessage(4);
                                 }

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/Activity_Parent_Mainpage_LinearLayout"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/Activity_Student_Mainpage_LinearLayout_BlueBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#0e7aac"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Activity_Parent_Mainpage_ImageView_Bell"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bell" />
+
+        <ImageView
+            android:id="@+id/Activity_Parent_Mainpage_ImageView_People"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/people" />
+
+        <ImageView
+            android:id="@+id/Activity_Parent_Mainpage_ImageView_More"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Main"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_Parent_Mainpage_LinearLayout_FirstRowFunction"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/homework" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="作业"
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function1"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/monitor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function2"
+                        android:textColor="@color/black"
+                        android:text="教室监控" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function3"
+                        android:textColor="@color/black"
+                        android:text="班级留言板" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_Parent_Mainpage_LinearLayout_SecondRowFunction"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function4"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/safe" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function4"
+                        android:text="安全校园" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/grade" />
+
+                    <TextView
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="成绩" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function6"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/remark" />
+
+                    <TextView
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function6"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="评语" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_Parent_Mainpage_LinearLayout_ThirdRowFunction"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function7"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function7"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/news" />
+
+                    <TextView
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="教育资讯" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function8"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_Parent_Mainpage_ImageView_Function8"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/Activity_Parent_Mainpage_TextView_Function8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:text="更多功能" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_Parent_Mainpage_LinearLayout_Function9"
+                    android:orientation="vertical"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Activity_Parent_Mainpage_ScrollView"
+            android:layout_marginTop="30dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_Parent_Mainpage_ScrollView_LinearLayout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Activity_Parent_Mainpage_ScrollView_LinearLayout_Main"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_EducationNews">
+                        <ImageView
+                            android:id="@+id/Acticity_Leader_Mainpage_ImageView_PartingLine1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/partingline" />
+
+                        <TextView
+                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNews"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/dimgray"
+                            android:text="系统消息"
+                            android:textSize="10dp" />
+
+
+
+                        <TextView
+                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNews"
+                            android:layout_marginLeft="10dp"
+                            android:text="您需要进行家长审核才能使用更多功能"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNewsDetails"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="50dp"
+                            android:layout_marginTop="5dp"
+                            android:text="点击右上角加号提交审核信息"
+                            android:textColor="@color/red"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
+            android:id="@+id/textView_parent_name"
         android:text="XXX" />
 	</LinearLayout>
 	
@@ -49,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:text="XXXXXXXX" />
+        android:text="XXXXXXXX"
+            android:id="@+id/textView_parenttel"/>
 	</LinearLayout>
 
     <ImageView
@@ -73,7 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:text="XXX" />
+        android:text="XXX"
+            android:id="@+id/textView_stuname"/>
 	</LinearLayout>
 	
     <ImageView
@@ -97,7 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:text="XXX" />
+        android:text="XXX"
+            android:id="@+id/textView_stuclass"/>
 	</LinearLayout>
 
     <ImageView
@@ -121,7 +125,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textColor="@color/black"
-        android:text="XXXXXXXXXX" />
+        android:text="XXXXXXXXXX"
+            android:id="@+id/textView_stunum"/>
 	</LinearLayout>
 
     <ImageView
@@ -199,7 +204,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
          android:textColor="@color/black"
-        android:ems="10" >
+        android:ems="10"
+        android:id="@+id/textView_comment">
     </EditText>
        
 	</LinearLayout>
@@ -214,7 +220,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="23dp"
        	android:layout_gravity="center"
-       
+       android:id="@+id/button_hand"
        android:background="@drawable/shape"
        android:textColor="@color/white"
        android:text="提交审核" />

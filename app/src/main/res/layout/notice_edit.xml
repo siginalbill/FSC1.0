@@ -34,18 +34,17 @@
             android:textStyle="bold" />
         
        <Button
+            android:layout_marginLeft="30dp"
             android:id="@+id/Notice_Button_Deliver"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/color_TitleBar"
-            android:text="@string/Notice_Edit_Deliver" />
+            android:text="@string/Notice_Edit_Deliver"
+            android:textColor="@color/white"
+           android:textSize="20dp"/>
        
         
-        <ListView
-            android:id="@+id/Homework_ListView_WorkList"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-        </ListView>
+
       
     </LinearLayout>
      <LinearLayout
@@ -63,14 +62,13 @@
             android:paddingTop="8sp"
             android:text="@string/Notice_Edit_Theme1"
             android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
       <EditText
             android:id="@+id/Notice_Edit_EditText_Theme2"
             android:layout_width="200dp"
             android:layout_height="36dp"
             android:textSize="15sp"
-            android:text="@string/Notice_Edit_Theme2"/>
+            android:hint="在此输入"/>
      </LinearLayout>
        <TextView
             android:id="@+id/Notice_Edit_TextView_Body1"
@@ -85,29 +83,11 @@
         <EditText
             android:id="@+id/Notice_Edit_EditText_Body2"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="match_parent"
             android:textSize="15sp"
-            android:text="@string/Notice_Edit_Body2"/>
+            />
         
-       <LinearLayout
-            android:id="@+id/Notice_Edit_LinearLayout_Cancel"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ffffff"
-            android:orientation="horizontal">
-        
-        <Button
-            android:id="@+id/Notice_Edit_Button_Picture"
-            android:layout_width="160dp"
-            android:layout_height="match_parent"
-            android:text="@string/Notice_Edit_Picture" />
-       
-        <Button
-            android:id="@+id/Notice_Edit_Button_Cancel"
-            android:layout_width="160dp"
-            android:layout_height="match_parent"
-            android:text="@string/Notice_Edit_Cancel" />
-     </LinearLayout>
+
      </LinearLayout>
         
         

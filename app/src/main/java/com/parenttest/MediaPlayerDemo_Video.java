@@ -201,6 +201,8 @@ public class MediaPlayerDemo_Video extends Activity implements OnBufferingUpdate
 
 	private void startVideoPlayback() {
 		Log.v(TAG, "startVideoPlayback");
+		mVideoWidth =  1080;
+		mVideoHeight = 540;
 		holder.setFixedSize(mVideoWidth, mVideoHeight);
 		mMediaPlayer.start();
 	}

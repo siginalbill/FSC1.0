@@ -12,22 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name="com.parenttest.NewsActivity"></activity>
+        <activity android:name="com.parenttest.NewsActivity" />
         <activity android:name="com.parenttest.ParentTestActivity" />
         <activity
             android:name="com.parenttest.RegisterActivity"
-            android:label="@string/title_activity_register">
-        </activity>
-        <activity android:name="com.parenttest.LoginActivity" >
+            android:label="@string/title_activity_register" />
+        <activity android:name="com.parenttest.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.parenttest.ParentMainPageActivity"
-            android:label="@string/title_activity_parent_main_page"></activity>
-        <activity android:name="com.parenttest.Mainpage_leader"></activity>
+            android:label="@string/title_activity_parent_main_page" />
+        <activity android:name="com.parenttest.Mainpage_leader" />
+        <activity android:name="com.leadertest.EditInformActivity" />
+        <activity android:name="com.teachertest.CheckList" />
+        <activity android:name="com.studenttest.StudentMainPageActivity" />
+        <activity android:name="com.parenttest.Mainpage_litter_parent" />
+        <activity android:name="com.parenttest.Activity_HandText" />
+        <activity android:name="com.parenttest.MediaPlayerDemo_Video" />
+        <activity android:name="com.teachertest.CheckDetail"></activity>
     </application>
 
 </manifest>
