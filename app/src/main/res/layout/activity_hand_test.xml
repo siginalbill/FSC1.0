@@ -4,6 +4,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_TitleBar"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageButton
+            android:id="@+id/activity_bianjipingyu_button_fanhui"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#4e80ad"
+            android:padding="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left" />
+
+        <TextView
+            android:id="@+id/activity_bianjipingyu_biaozhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="200"
+            android:padding="1dp"
+            android:text="家长信息"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
     
     <ImageView
         android:layout_width="wrap_content"
@@ -79,31 +111,6 @@
             android:id="@+id/textView_stuname"/>
 	</LinearLayout>
 	
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_shelf_category_divider" />
-
-      <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:text="学生班级：" />
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        android:text="XXX"
-            android:id="@+id/textView_stuclass"/>
-	</LinearLayout>
-
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

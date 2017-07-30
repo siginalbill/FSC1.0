@@ -89,7 +89,7 @@ public class CheckList extends Activity {
                                 bundle.putString("parent_name", ((JSONObject)uncheck.get(position)).getString("parent_name"));
                                 bundle.putString("parent_tel", ((JSONObject)uncheck.get(position)).getString("parent_tel"));
                                 bundle.putString("student_name", ((JSONObject)uncheck.get(position)).getString("student_name"));
-                                bundle.putString("student_class", ((JSONObject)uncheck.get(position)).getString("student_class"));
+
                                 bundle.putString("student_num", ((JSONObject)uncheck.get(position)).getString("student_num"));
                                 bundle.putString("comment", ((JSONObject)uncheck.get(position)).getString("comment"));
                             }catch (Exception e){

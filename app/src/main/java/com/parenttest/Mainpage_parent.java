@@ -247,7 +247,8 @@ public class Mainpage_parent extends Activity {
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function8) {
 
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_People) {
-
+                Intent intent = new Intent(Mainpage_parent.this, UserDetailActivity.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_More) {
 
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Bell) {

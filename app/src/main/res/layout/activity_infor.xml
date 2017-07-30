@@ -68,6 +68,7 @@
            android:layout_height="60dp"
            android:layout_gravity="center"
            android:layout_marginTop="10dp"
+           android:id="@+id/imageView_Head"
            android:src="@drawable/parent_head" />
 
     <TextView
@@ -77,7 +78,8 @@
       android:layout_gravity="center"
       android:textColor="@color/black"
       android:textSize="20dp"
-        android:text="点击上传头像" />
+        android:text="点击上传头像"
+        android:id="@+id/textView_updataimg"/>
 
     <ImageView
         android:layout_width="match_parent"

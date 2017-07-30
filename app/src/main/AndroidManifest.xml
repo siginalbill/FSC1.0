@@ -3,6 +3,8 @@
     package="com.example.vic_sun.fsc">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".MyApplication"
@@ -13,7 +15,6 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
         <activity android:name="com.parenttest.NewsActivity" />
-        <activity android:name="com.parenttest.ParentTestActivity" />
         <activity
             android:name="com.parenttest.RegisterActivity"
             android:label="@string/title_activity_register" />
@@ -28,13 +29,14 @@
         <activity android:name="com.leadertest.EditInformActivity" />
         <activity android:name="com.teachertest.CheckList" />
         <activity android:name="com.parenttest.Mainpage_litter_parent" />
-        <activity android:name="com.leadertest.Mainpage_leader"></activity>
-        <activity android:name="com.parenttest.Mainpage_parent"></activity>
-        <activity android:name="com.studenttest.Mainpage_student"></activity>
-        <activity android:name="com.teachertest.Mainpage_teacher"></activity>
+        <activity android:name="com.leadertest.Mainpage_leader" />
+        <activity android:name="com.parenttest.Mainpage_parent" />
+        <activity android:name="com.studenttest.Mainpage_student" />
+        <activity android:name="com.teachertest.Mainpage_teacher" />
         <activity android:name="com.parenttest.Activity_HandText" />
         <activity android:name="com.parenttest.MediaPlayerDemo_Video" />
-        <activity android:name="com.teachertest.CheckDetail"></activity>
+        <activity android:name="com.teachertest.CheckDetail" />
+        <activity android:name="com.parenttest.UserDetailActivity"></activity>
     </application>
 
 </manifest>

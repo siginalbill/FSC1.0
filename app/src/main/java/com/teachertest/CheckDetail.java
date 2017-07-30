@@ -47,7 +47,6 @@ public class CheckDetail extends Activity {
         tv_parentname = (TextView) findViewById(R.id.textView_parent_name);
         tv_parenttel = (TextView) findViewById(R.id.textView_parenttel);
         tv_stuname = (TextView) findViewById(R.id.textView_stuname);
-        tv_stuclass = (TextView) findViewById(R.id.textView_stuclass);
         tv_stunum = (TextView) findViewById(R.id.textView_stunum);
         et_comment = (EditText) findViewById(R.id.textView_comment) ;
 
@@ -55,11 +54,10 @@ public class CheckDetail extends Activity {
         Button bt_hand = (Button) findViewById(R.id.button_hand);
 
         tv_parentname.setText(bundle.getString("parent_name"));
-        tv_parenttel.setText(bundle.getString("parenttel"));
-        tv_stuname.setText(bundle.getString("stuname"));
-        tv_stuclass.setText(bundle.getString("stuclass"));
-        tv_stunum.setText(bundle.getString("stunum"));
-        et_comment.setText(bundle.getString("comment"));
+        tv_parenttel.setText(bundle.getString("parent_tel"));
+        tv_stuname.setText(bundle.getString("student_name"));
+        tv_stunum.setText(bundle.getString("student_num"));
+        et_comment.setHint(bundle.getString("comment"));
 
 
         MyClickListener mc = new MyClickListener();
@@ -76,10 +74,12 @@ public class CheckDetail extends Activity {
                                 .show();
                         Intent intent = new Intent(CheckDetail.this, CheckList.class);
                         startActivity(intent);
+                        break;
                     case 0x121:
                         Toast.makeText(CheckDetail.this,
                                 "提交失败", Toast.LENGTH_LONG)
                                 .show();
+                        break;
                 }
             }
         };
