@@ -93,7 +93,6 @@ public class Mainpage_parent extends Activity {
         tx_informlead1.setOnClickListener(mc);
         tx_informcontent1.setOnClickListener(mc);
 
-
         tx_messagelead1.setOnClickListener(mc);
         tx_messagecontent1.setOnClickListener(mc);
         tx_messagelead2.setOnClickListener(mc);
