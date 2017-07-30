@@ -51,9 +51,9 @@ public class CheckList extends Activity {
 
         final JSONObject requestJson = new JSONObject();
         try {
-            requestJson.put("user_id", 1);
-            requestJson.put("user_flag", 2);
-            requestJson.put("user_pwd", user.user_pwd);
+            requestJson.put("user_id", user.getUser_id());
+            requestJson.put("user_flag", user.getUser_flag());
+            requestJson.put("user_pwd", user.getUser_pwd());
             requestJson.put("action", "checklist");
 
         } catch (Exception e) {
