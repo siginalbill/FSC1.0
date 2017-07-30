@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/Activity_Parent_Mainpage_ImageView_Bell"
+            android:id="@+id/Activity_Leader_Mainpage_ImageView_Bell"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginRight="20dp"
@@ -22,7 +22,7 @@
             android:background="@drawable/bell" />
 
         <ImageView
-            android:id="@+id/Activity_Parent_Mainpage_ImageView_People"
+            android:id="@+id/Activity_Leader_Mainpage_ImageView_People"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginRight="20dp"
@@ -30,7 +30,7 @@
             android:background="@drawable/people" />
 
         <ImageView
-            android:id="@+id/Activity_Parent_Mainpage_ImageView_More"
+            android:id="@+id/Activity_Leader_Mainpage_ImageView_More"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginRight="20dp"

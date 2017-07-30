@@ -190,7 +190,7 @@ public class CheckList extends Activity {
 
         @Override
         public long getItemId(int position) {
-// TODO Auto-generated method stub
+        // TODO Auto-generated method stub
             return position;
         }
 
@@ -198,11 +198,11 @@ public class CheckList extends Activity {
         //简单来说就是拿到单行的一个布局，然后根据不同的数值，填充主要的listView的每一个item
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-// TODO Auto-generated method stub
-//拿到ListViewItem的布局，转换为View类型的对象
+            // TODO Auto-generated method stub
+            //拿到ListViewItem的布局，转换为View类型的对象
             View layout = View.inflate(CheckList.this, R.layout.activity_check_listview_item, null);
 
-//显示名字
+            //显示名字
             TextView tvName = (TextView) layout.findViewById(R.id.username);
             try{
                 String parent_name = ((JSONObject)getJsonItem(position)).getString("parent_name");

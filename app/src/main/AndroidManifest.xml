@@ -24,14 +24,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.parenttest.ParentMainPageActivity"
-            android:label="@string/title_activity_parent_main_page" />
         <activity android:name="com.parenttest.Mainpage_leader" />
         <activity android:name="com.leadertest.EditInformActivity" />
         <activity android:name="com.teachertest.CheckList" />
-        <activity android:name="com.studenttest.StudentMainPageActivity" />
         <activity android:name="com.parenttest.Mainpage_litter_parent" />
+        <activity android:name="com.leadertest.Mainpage_leader"></activity>
+        <activity android:name="com.parenttest.Mainpage_parent"></activity>
+        <activity android:name="com.studenttest.Mainpage_student"></activity>
+        <activity android:name="com.teachertest.Mainpage_teacher"></activity>
         <activity android:name="com.parenttest.Activity_HandText" />
         <activity android:name="com.parenttest.MediaPlayerDemo_Video" />
         <activity android:name="com.teachertest.CheckDetail"></activity>

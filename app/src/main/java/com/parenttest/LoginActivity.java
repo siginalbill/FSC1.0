@@ -18,6 +18,8 @@ import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
 import com.server.WebServerHelp;
+import com.studenttest.Mainpage_student;
+import com.teachertest.Mainpage_teacher;
 
 import org.json.JSONObject;
 
@@ -71,17 +73,17 @@ public class LoginActivity extends Activity {
                 int flag = msg.what;
                 if(flag==0)
                 {
-                    Intent intent=new Intent(LoginActivity.this, ParentMainPageActivity.class);
+                    Intent intent=new Intent(LoginActivity.this, Mainpage_parent.class);
                     startActivity(intent);
                 }
                 else if(flag==1)
                 {
-                    Intent intent=new Intent(LoginActivity.this, ParentMainPageActivity.class);
+                    Intent intent=new Intent(LoginActivity.this, Mainpage_student.class);
                     startActivity(intent);
                 }
                 else if(flag==2)
                 {
-                    Intent intent=new Intent(LoginActivity.this, ParentMainPageActivity.class);
+                    Intent intent=new Intent(LoginActivity.this, Mainpage_teacher.class);
                     startActivity(intent);
                 }
                 else if(flag==3)

@@ -42,15 +42,10 @@ public class Mainpage_litter_parent extends Activity {
 
             }
             else if (V.getId() == R.id.Activity_Parent_Mainpage_LinearLayout_Function2){
-                final String MEDIA = "media";
-                int STREAM_VIDEO = 5;
-                Intent intent = new Intent(Mainpage_litter_parent.this, MediaPlayerDemo_Video.class);
-                intent.putExtra(MEDIA, STREAM_VIDEO);
-                startActivity(intent);
+
             }
             else {
-                Intent intent = new Intent(Mainpage_litter_parent.this, CheckList.class);
-                startActivity(intent);
+
             }
         }
     }
