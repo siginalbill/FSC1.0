@@ -25,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.parenttest.Mainpage_leader" />
         <activity android:name="com.leadertest.EditInformActivity" />
         <activity android:name="com.teachertest.CheckList" />
         <activity android:name="com.parenttest.Mainpage_litter_parent" />
@@ -37,6 +36,10 @@
         <activity android:name="com.parenttest.MediaPlayerDemo_Video" />
         <activity android:name="com.teachertest.CheckDetail" />
         <activity android:name="com.parenttest.UserDetailActivity"></activity>
+        <activity android:name="com.studenttest.Activity_Matk_Mainpage"></activity>
+        <activity android:name="com.studenttest.Activity_Mark_Student_Page"></activity>
+        <activity android:name="com.parenttest.safe_school_list"></activity>
+        <activity android:name="com.parenttest.safe_school_detail"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
+import com.parenttest.NewsActivity;
 import com.server.WebServerHelp;
 
 import org.json.JSONException;
@@ -163,13 +164,11 @@ public class Mainpage_leader extends Activity {
 
                     if (rJson == null) {
                         handler.sendMessage(message);
-                        tst = Toast.makeText(Mainpage_leader.this, "那就失败了", Toast.LENGTH_SHORT);
-                        tst.show();
+
 
                     } else {
                         handler.sendMessage(message);
-                        tst = Toast.makeText(Mainpage_leader.this, "服务异常", Toast.LENGTH_SHORT);
-                        tst.show();
+
                     }
 
                     handler.sendMessage(message);
@@ -185,10 +184,12 @@ public class Mainpage_leader extends Activity {
         @Override
         public void onClick(View V) {
             if (V.getId() == R.id.Acticity_Leader_Mainpage_ImageView_Function1) {
-
+                Intent intent = new Intent(Mainpage_leader.this, NewsActivity.class);
+                startActivity(intent);
 
             } else if(V.getId() == R.id.Acticity_Leader_Mainpage_ImageView_Function2){
-
+                Intent intent = new Intent(Mainpage_leader.this, EditInformActivity.class);
+                startActivity(intent);
             }else if(V.getId() == R.id.Acticity_Leader_Mainpage_RelativeLayout_EducationNews){
 
             }

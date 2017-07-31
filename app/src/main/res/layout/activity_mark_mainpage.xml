@@ -91,85 +91,11 @@
             />
 
     </LinearLayout>
-  <LinearLayout
+
+    <ListView
+        android:id="@+id/Activity_Mark_Mainpage_ListView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:id="@+id/Acticity_Mark_Mainpage_LinearLayout_MarkList"
-        >
-   <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/Acticity_Mark_Mainpage_LinearLayout_Mark1"
-            android:orientation="vertical"
-            >
-
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal"
-                android:id="@+id/Acticity_Mark_Mainpage_RelativeLayout_Mark1">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                >
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_height="30dp"
-                    android:id="@+id/Activity_Mark_Mainpage_ImageView_Book"
-                    android:background="@drawable/book_1"
-
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="2"
-                android:layout_gravity="center"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Activity_Mark_Mainpage_TextView_Mark1"
-                    android:text="入学考试"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    />
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Activity_Mark_Mainpage_ImageView_Right"
-                    android:background="@drawable/right2"
-                    android:layout_marginRight="20dp"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-       <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:background="@drawable/partingline"
-           android:id="@+id/Activity_Mark_Mainpage_ImageView_PartingLine2"
-           />
-
-   </LinearLayout>
-
-
-
-    </LinearLayout>
+        android:layout_height="wrap_content" >
+    </ListView>
 
 </LinearLayout>

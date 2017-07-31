@@ -21,6 +21,7 @@ import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
 import com.parenttest.MediaPlayerDemo_Video;
+import com.parenttest.safe_school_list;
 import com.server.WebServerHelp;
 
 import org.json.JSONException;
@@ -238,9 +239,11 @@ public class Mainpage_student extends Activity {
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function3) {
 
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function4) {
-
+                Intent intent = new Intent(Mainpage_student.this, safe_school_list.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function5) {
-
+                Intent intent = new Intent(Mainpage_student.this, Activity_Matk_Mainpage.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function6) {
 
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function7) {

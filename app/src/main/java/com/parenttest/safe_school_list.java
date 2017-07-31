@@ -1,4 +1,8 @@
-package com.teachertest;
+package com.parenttest;
+
+/**
+ * Created by hxy on 2017/7/31.
+ */
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
 
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
@@ -25,32 +30,37 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Calendar;
+import java.util.Date;
 
-public class CheckList extends Activity {
+public class safe_school_list extends Activity {
     private MyApplication mApplication;
     ApplicationUser user;
-
     Handler handler;
+    JSONArray safelistJson;
 
-    JSONArray uncheck;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_check_listview);
+        setContentView(R.layout.safe_school_listview);
 
         mApplication = (MyApplication) getApplication();
         user = mApplication.getUser();
 
-
+        TextView tvtoday = (TextView)findViewById(R.id.activity_safe_school_showTexttodaydate);
+        Date time = new java.sql.Date(new java.util.Date().getTime());
+        String sDate = time.toString();
+        tvtoday.setText(sDate);
 
         final JSONObject requestJson = new JSONObject();
         try {
             requestJson.put("user_id", user.getUser_id());
             requestJson.put("user_flag", user.getUser_flag());
             requestJson.put("user_pwd", user.getUser_pwd());
-            requestJson.put("action", "checklist");
+            //action需要确认
+            requestJson.put("action", "safeschool");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -62,32 +72,24 @@ public class CheckList extends Activity {
             @Override
             public void handleMessage(Message msg) {
                 if(msg.what == 0x121){
-                    JSONObject listJson = (JSONObject) msg.obj;
+                    safelistJson = (JSONArray) msg.obj;
 
-                    JSONArray checked;
-                    try{
-                        uncheck = (JSONArray)listJson.getJSONArray("uncheck");
-
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
                     GeneralAdapter generalAdapt = new GeneralAdapter();
-                    ListView lv_name = (ListView) findViewById(R.id.listView);
-                    lv_name.setAdapter(generalAdapt);
-                    lv_name.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    //定义listview
+                    ListView lv_safe = (ListView) findViewById(R.id.activity_safe_school_listView);
+                    lv_safe.setAdapter(generalAdapt);
+                    lv_safe.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                         public void onItemClick(AdapterView<?> parent, View view,
                                                 int position, long id) {
                             // TODO Auto-generated method stub
-                            Intent intent = new Intent(CheckList.this, CheckDetail.class);
+                            Intent intent = new Intent(safe_school_list.this, safe_school_detail.class);
                             Bundle bundle = new Bundle();
                             try{
-                                bundle.putString("parent_name", ((JSONObject)uncheck.get(position)).getString("parent_name"));
-                                bundle.putString("parent_tel", ((JSONObject)uncheck.get(position)).getString("parent_tel"));
-                                bundle.putString("student_name", ((JSONObject)uncheck.get(position)).getString("student_name"));
-
-                                bundle.putString("student_num", ((JSONObject)uncheck.get(position)).getString("student_num"));
-                                bundle.putString("comment", ((JSONObject)uncheck.get(position)).getString("comment"));
+                                bundle.putString("attendence_date", ((JSONObject)safelistJson.get(position)).getString("attendence_date"));
+                                bundle.putInt("attendence_flag", ((JSONObject)safelistJson.get(position)).getInt("attendence_flag"));
+                                bundle.putString("attendence_com", ((JSONObject)safelistJson.get(position)).getString("attendence_com"));
+                                bundle.putString("attendence_left", ((JSONObject)safelistJson.get(position)).getString("attendence_left"));
                             }catch (Exception e){
                                 e.printStackTrace();
                             }
@@ -107,7 +109,7 @@ public class CheckList extends Activity {
             public void run() {
                 Message message = handler.obtainMessage();
                 try {
-                    URL url = new URL(WebServerHelp.getURL() + "CheckList");
+                    URL url = new URL(WebServerHelp.getURL() + "SafeSchool");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setConnectTimeout(5000);
                     conn.setDoOutput(true);// 设置允许输出
@@ -131,7 +133,7 @@ public class CheckList extends Activity {
                     }
                     inStream.close();
                     String returnString = new String(outStream.toByteArray());
-                    JSONObject rJson = new JSONObject(returnString);
+                    JSONArray rJson = new JSONArray(returnString);
 
                     message.obj = rJson;
                     message.what = 0x121;
@@ -161,10 +163,10 @@ public class CheckList extends Activity {
         @Override
         public int getCount() {
 // TODO Auto-generated method stub
-            if (uncheck == null){
+            if (safelistJson == null){
                 return 0;
             }else{
-                return uncheck.length();
+                return safelistJson.length();
             }
         }
 
@@ -176,7 +178,7 @@ public class CheckList extends Activity {
         public JSONObject getJsonItem(int position) {
 // TODO Auto-generated method stub
             try {
-                return (JSONObject) uncheck.get(position);
+                return (JSONObject) safelistJson.get(position);
             }catch (Exception e){
                 e.printStackTrace();
                 return null;
@@ -186,7 +188,7 @@ public class CheckList extends Activity {
 
         @Override
         public long getItemId(int position) {
-        // TODO Auto-generated method stub
+            // TODO Auto-generated method stub
             return position;
         }
 
@@ -196,13 +198,30 @@ public class CheckList extends Activity {
         public View getView(int position, View convertView, ViewGroup parent) {
             // TODO Auto-generated method stub
             //拿到ListViewItem的布局，转换为View类型的对象
-            View layout = View.inflate(CheckList.this, R.layout.activity_check_listview_item, null);
+            View layout = View.inflate(safe_school_list.this, R.layout.safe_school_listview_item, null);
 
-            //显示名字
-            TextView tvName = (TextView) layout.findViewById(R.id.username);
+            //
+
+            TextView tvState = (TextView) layout.findViewById(R.id.activity_safe_school_state);
+            TextView tvdate = (TextView) layout.findViewById(R.id.activity_safe_school_weekday);
+
             try{
-                String parent_name = ((JSONObject)getJsonItem(position)).getString("parent_name");
-                tvName.setText(parent_name);
+                String attendence_date = ((JSONObject)getJsonItem(position)).getString("attendence_date");
+                int attendence_flag = ((JSONObject)getJsonItem(position)).getInt("attendence_flag");
+                String state=null;
+                if(attendence_flag == 0){
+                     state="正常";
+                }else  if(attendence_flag == 1){
+                    state="缺勤";
+                }else if(attendence_flag == 2){
+                    state="迟到";
+                }else if(attendence_flag == 3){
+                    state="早退";
+                }
+
+                tvdate.setText(attendence_date);
+                tvState.setText(state);
+
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -210,6 +229,8 @@ public class CheckList extends Activity {
 
             return layout;
         }
+
+
 
     }
 

@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/Acticity_Leader_Mainpage_LinearLayout_FunctionIncluded"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
