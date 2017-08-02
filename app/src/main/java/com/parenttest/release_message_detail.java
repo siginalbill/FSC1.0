@@ -2,6 +2,7 @@ package com.parenttest;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -25,6 +26,7 @@ public class release_message_detail extends Activity{
     TextView tv_name, tv_type, tv_date, tv_title, tv_content;
     ImageView iv_head, iv_image;
     Handler handler;
+    Bitmap bmp1, bmp2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +70,8 @@ public class release_message_detail extends Activity{
                     tv_title.setText(message_title);
                     tv_date.setText(message_date);
 
-
+                    iv_head.setImageBitmap(bmp1);
+                    iv_image.setImageBitmap(bmp2);
                 }
 
             }
@@ -77,8 +80,8 @@ public class release_message_detail extends Activity{
         new Thread() {
             public void run() {
                 try {
-                    iv_head.setImageBitmap(GetImage.getInternetPicture(parent_img));
-                    iv_image.setImageBitmap(GetImage.getInternetPicture(message_img));
+                    bmp1 = GetImage.getInternetPicture(parent_img);
+                    bmp2 = GetImage.getInternetPicture(message_img);
                 } catch (Exception e) {
 
                 }
