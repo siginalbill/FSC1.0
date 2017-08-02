@@ -70,6 +70,7 @@ public class Mainpage_parent extends Activity {
         tx_informlead1 = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_LatestNewsLeader1);
         tx_informcontent1 = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_LatestNewsDetails1);
 
+
         tx_messagelead1 = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_ClassNoteLeader1);
         tx_messagecontent1 = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_ClassNoteDetails1);
         tx_messagelead2 = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_ClassNoteLeader2);
@@ -137,9 +138,7 @@ public class Mainpage_parent extends Activity {
                             JSONObject inform1_json = rJsons.getJSONObject("i1");
                             tx_informcontent1.setText(inform1_json.getString("inform_content"));
                             tx_informlead1.setText(inform1_json.getString("inform_title"));
-                            JSONObject inform2_json = rJsons.getJSONObject("i2");
-                            tx_informcontent2.setText(inform2_json.getString("inform_content"));
-                            tx_informlead2.setText(inform2_json.getString("inform_title"));
+                            
                             JSONObject m1_json = rJsons.getJSONObject("m1");
                             tx_messagelead1.setText(m1_json.getString("message_title"));
                             tx_messagecontent1.setText(m1_json.getString("message_content"));
@@ -202,6 +201,7 @@ public class Mainpage_parent extends Activity {
                     message.what = 1;
 
                     if (rJson == null) {
+                        message.what = 2;
                         handler.sendMessage(message);
                         tst = Toast.makeText(Mainpage_parent.this, "那就失败了", Toast.LENGTH_SHORT);
                         tst.show();

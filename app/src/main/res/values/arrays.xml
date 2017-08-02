@@ -6,4 +6,10 @@
         <item>老师登录</item>
         <item>领导登录</item>
     </string-array>
+
+    <string-array name="major_kind">
+        <item>语文</item>
+        <item>数学</item>
+        <item>英语</item>
+    </string-array>
 </resources>

@@ -39,10 +39,10 @@
             android:layout_height="wrap_content"
             android:background="@color/color_TitleBar"
             android:text="@string/Notice_Edit_Deliver"
-           android:paddingTop="10dp"
+
             android:textColor="@color/white"
            android:textSize="20dp"
-           android:layout_marginRight="20dp"
+           android:layout_marginRight="10dp"
            android:layout_weight="1"/>
        
         
@@ -59,7 +59,7 @@
             android:id="@+id/Notice_Edit_TextView_Theme"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
 
             android:paddingTop="8sp"
             android:text="@string/Notice_Edit_Theme1"
@@ -76,12 +76,15 @@
             android:id="@+id/Notice_Edit_TextView_Body1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:gravity="left"
+           android:paddingLeft="20dp"
             android:paddingBottom="8sp"
             android:paddingTop="8sp"
             android:text="@string/Notice_Edit_Body1"
             android:textSize="20sp"
-            android:textStyle="bold" />
+
+           android:background="@color/white"
+           android:textColor="@color/black"/>
         <EditText
             android:id="@+id/Notice_Edit_EditText_Body2"
             android:layout_width="match_parent"
@@ -91,33 +94,3 @@
         
 
      </LinearLayout>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

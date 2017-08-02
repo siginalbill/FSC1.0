@@ -11,7 +11,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,7 +19,6 @@ import android.widget.Toast;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
-import com.parenttest.NewsActivity;
 import com.server.WebServerHelp;
 
 import org.json.JSONException;
@@ -83,7 +81,7 @@ public class Mainpage_leader extends Activity {
             requestJson.put("user_id", user.user_id);
             requestJson.put("user_flag", user.user_flag);
             requestJson.put("user_pwd", user.user_pwd);
-            requestJson.put("action", "getMessage");
+            requestJson.put("action", "mainPage");
 
 
         } catch (Exception e) {
@@ -105,7 +103,7 @@ public class Mainpage_leader extends Activity {
                             news_json = rJsons.getJSONObject("news");
                             tx_newscontent.setText(news_json.getString("news_content"));
                             tx_newslead.setText(news_json.getString("news_title"));
-                            JSONObject inform_json = rJsons.getJSONObject("inform");
+                            JSONObject inform_json = rJsons.getJSONObject("i1");
                             tx_informcontent1.setText(inform_json.getString("inform_content"));
                             tx_informlead1.setText(inform_json.getString("inform_title"));
                         } catch (JSONException e) {
@@ -184,11 +182,11 @@ public class Mainpage_leader extends Activity {
         @Override
         public void onClick(View V) {
             if (V.getId() == R.id.Acticity_Leader_Mainpage_ImageView_Function1) {
-                Intent intent = new Intent(Mainpage_leader.this, NewsActivity.class);
+                Intent intent = new Intent(Mainpage_leader.this, education_news_main_others.class);
                 startActivity(intent);
 
             } else if(V.getId() == R.id.Acticity_Leader_Mainpage_ImageView_Function2){
-                Intent intent = new Intent(Mainpage_leader.this, EditInformActivity.class);
+                Intent intent = new Intent(Mainpage_leader.this, Activity_Notice.class);
                 startActivity(intent);
             }else if(V.getId() == R.id.Acticity_Leader_Mainpage_RelativeLayout_EducationNews){
 

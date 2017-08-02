@@ -14,7 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar">
-        <activity android:name="com.parenttest.NewsActivity" />
         <activity
             android:name="com.parenttest.RegisterActivity"
             android:label="@string/title_activity_register" />
@@ -25,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.leadertest.EditInformActivity" />
         <activity android:name="com.teachertest.CheckList" />
         <activity android:name="com.parenttest.Mainpage_litter_parent" />
         <activity android:name="com.leadertest.Mainpage_leader" />
@@ -40,10 +38,20 @@
         <activity android:name="com.studenttest.Activity_Mark_Student_Page" />
         <activity android:name="com.parenttest.safe_school_list" />
         <activity android:name="com.parenttest.safe_school_detail" />
-        <activity android:name="com.parenttest.Message_Hand"></activity>
-        <activity android:name="com.parenttest.release_message_main"></activity>
-        <activity android:name="com.parenttest.release_message_detail"></activity>
-
+        <activity android:name="com.parenttest.Message_Hand" />
+        <activity android:name="com.parenttest.release_message_main" />
+        <activity android:name="com.parenttest.release_message_detail" />
+        <activity android:name="com.leadertest.education_news_detail" />
+        <activity android:name="com.leadertest.education_news_main_others" />
+        <activity android:name="com.leadertest.Activity_Notice" />
+        <activity android:name="com.leadertest.Activity_NoticeList" />
+        <activity android:name="com.teachertest.Activity_EditRemark" />
+        <activity android:name="com.teachertest.Activity_Remark" />
+        <activity android:name="com.leadertest.Activity_Notice_Detail"></activity>
+        <activity android:name="com.studenttest.activity_allfunctions"></activity>
+        <activity android:name="com.teachertest.homework_detail"></activity>
+        <activity android:name="com.teachertest.homework_edit"></activity>
+        <activity android:name="com.teachertest.HomeworkMainActivity"></activity>
     </application>
 
 </manifest>

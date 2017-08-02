@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/Activity_EducationNews_Detailsils_Item"
+    >
+
+    <LinearLayout
+        android:id="@+id/Activity_LatestNews_LinearLayout_BlueBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#0e7aac"
+
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/Acticity_LatestNews_LinearLayout_Left"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            >
+
+            <ImageView
+                android:id="@+id/Activity_LatestImageView_Left"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Activity_LatestNews_LinearLayout_More"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/Activity_LatestImageView_Bell"
+                android:layout_width="25dp"
+
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bell" />
+
+            <ImageView
+                android:id="@+id/Activity_EducationNews_Details_People"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/people" />
+
+            <ImageView
+                android:id="@+id/Activity_EducationNews_Details_More"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/add" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+
+     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/Activity_EducationNews_Detailsils_Item_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="title"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/Activity_EducationNews_Details_TextView_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:text="date and time"
+                android:textColor="@color/gray"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/Activity_EducationNews_Detailsils_Item_ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/test" />
+            <ImageView
+                android:id="@+id/Activity_EducationNews_Details_ImageView_PartingLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/partingline" />
+
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+
+            >
+
+
+            <TextView
+                android:id="@+id/Activity_EducationNews_Details_TextView_Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="content"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+ </ScrollView>
+
+
+</LinearLayout>

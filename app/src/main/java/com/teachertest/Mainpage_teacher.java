@@ -138,9 +138,7 @@ public class Mainpage_teacher extends Activity {
                             JSONObject inform1_json = rJsons.getJSONObject("i1");
                             tx_informcontent1.setText(inform1_json.getString("inform_content"));
                             tx_informlead1.setText(inform1_json.getString("inform_title"));
-                            JSONObject inform2_json = rJsons.getJSONObject("i2");
-                            tx_informcontent2.setText(inform2_json.getString("inform_content"));
-                            tx_informlead2.setText(inform2_json.getString("inform_title"));
+
                             JSONObject m1_json = rJsons.getJSONObject("m1");
                             tx_messagelead1.setText(m1_json.getString("message_title"));
                             tx_messagecontent1.setText(m1_json.getString("message_content"));
@@ -227,7 +225,8 @@ public class Mainpage_teacher extends Activity {
         @Override
         public void onClick(View V) {
             if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function1) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, HomeworkMainActivity.class);
+                startActivity(intent);
 
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function2) {
                 final String MEDIA = "media";
@@ -242,7 +241,8 @@ public class Mainpage_teacher extends Activity {
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function5) {
 
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function6) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, Activity_EditRemark.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function7) {
 
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function8) {

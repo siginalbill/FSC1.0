@@ -23,6 +23,7 @@ import com.example.vic_sun.fsc.R;
 import com.parenttest.MediaPlayerDemo_Video;
 import com.parenttest.safe_school_list;
 import com.server.WebServerHelp;
+import com.teachertest.Activity_Remark;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -139,9 +140,7 @@ public class Mainpage_student extends Activity {
                             JSONObject inform1_json = rJsons.getJSONObject("i1");
                             tx_informcontent1.setText(inform1_json.getString("inform_content"));
                             tx_informlead1.setText(inform1_json.getString("inform_title"));
-                            JSONObject inform2_json = rJsons.getJSONObject("i2");
-                            tx_informcontent2.setText(inform2_json.getString("inform_content"));
-                            tx_informlead2.setText(inform2_json.getString("inform_title"));
+
                             JSONObject m1_json = rJsons.getJSONObject("m1");
                             tx_messagelead1.setText(m1_json.getString("message_title"));
                             tx_messagecontent1.setText(m1_json.getString("message_content"));
@@ -205,13 +204,11 @@ public class Mainpage_student extends Activity {
 
                     if (rJson == null) {
                         handler.sendMessage(message);
-                        tst = Toast.makeText(Mainpage_student.this, "那就失败了", Toast.LENGTH_SHORT);
-                        tst.show();
+
 
                     } else {
                         handler.sendMessage(message);
-                        tst = Toast.makeText(Mainpage_student.this, "服务异常", Toast.LENGTH_SHORT);
-                        tst.show();
+
                     }
 
                     handler.sendMessage(message);
@@ -245,11 +242,13 @@ public class Mainpage_student extends Activity {
                 Intent intent = new Intent(Mainpage_student.this, Activity_Matk_Mainpage.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function6) {
-
+                Intent intent = new Intent(Mainpage_student.this, Activity_Remark.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function7) {
 
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_Function8) {
-
+                Intent intent = new Intent(Mainpage_student.this, activity_allfunctions.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_People) {
 
             } else if (V.getId() == R.id.Activity_Student_Mainpage_ImageView_More) {

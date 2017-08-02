@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:background="@color/white"
+    android:orientation="horizontal" >
+    
+     <TextView
+            android:id="@+id/homework_firstdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+         android:layout_marginLeft="20dp"
+            android:text="日期1"
+            android:textColor="@color/black"
+
+            android:textSize="20sp" />
+
+     <ImageView
+         android:id="@+id/homework_right"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/right2"
+         android:layout_marginLeft="180dp"
+         />
+
+</LinearLayout>

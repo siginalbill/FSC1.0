@@ -310,7 +310,7 @@
                             android:layout_width="40dp"
                             android:layout_height="20dp"
                             android:layout_marginLeft="10dp"
-                            android:textColor="@color/dimgray"
+                            android:textColor="@color/color_TitleBar"
                             android:text="教育资讯"
                             android:textSize="10dp" />
 
@@ -321,7 +321,6 @@
                             android:layout_alignParentStart="true"
                             android:layout_alignParentLeft="true"
                             android:layout_below="@+id/Activity_Student_Mainpage_TextView_EducationNews"
-                            android:layout_marginLeft="10dp"
                             android:src="@drawable/test" />
 
 
@@ -367,7 +366,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:textColor="@color/dimgray"
+                            android:textColor="@color/green"
                             android:layout_marginTop="6dp"
                             android:text="班级留言板"
                             android:textSize="10dp" />
@@ -446,7 +445,7 @@
                         <TextView
                             android:id="@+id/Activity_Student_Mainpage_TextView_LatestNews"
                             android:layout_width="wrap_content"
-                            android:textColor="@color/dimgray"
+                            android:textColor="@color/red"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="6dp"
@@ -491,124 +490,9 @@
 
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:id="@+id/Activity_Student_Mainpage_RelativeLayout_RecentAttendence"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/Activity_Student_Mainpage_RelativeLayout_EducationNews">
-
-                        <ImageView
-                            android:id="@+id/Activity_Student_Mainpage_ImageView_PartingLine6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/partingline" />
-
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_RecentAttendence"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/dimgray"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="6dp"
-                            android:text="最近考勤"
-                            android:textSize="10dp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:id="@+id/Activity_Student_Mainpage_RelativeLayout_RecentAttendenceDetials"
-                        android:layout_height="wrap_content">
 
 
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_RecentAttendenceLeader1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="星期二"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
 
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_RecentAttendenceDetails1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Student_Mainpage_TextView_RecentAttendenceLeader1"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:textColor="@color/dimgray"
-                            android:text="迟到"
-                            android:textSize="12dp" />
-
-                        <ImageView
-                            android:id="@+id/Activity_Student_Mainpage_ImageView_PartingLine7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Student_Mainpage_TextView_RecentAttendenceDetails1"
-                            android:layout_marginLeft="10dp"
-                            android:src="@drawable/partingline" />
-
-
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:id="@+id/Activity_Student_Mainpage_RelativeLayout_LastExam"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/Activity_Student_Mainpage_RelativeLayout_EducationNews">
-
-                        <ImageView
-                            android:id="@+id/Activity_Student_Mainpage_ImageView_PartingLine8"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/partingline" />
-
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_LastExam"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/dimgray"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="6dp"
-                            android:text="上次考试"
-                            android:textSize="10dp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:id="@+id/Activity_Student_Mainpage_RelativeLayout_LastExamDetails"
-                        android:layout_height="wrap_content">
-
-
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_LastExamLeader1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="第一次月考"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/Activity_Student_Mainpage_TextView_LastExamDetails1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Student_Mainpage_TextView_LastExamLeader1"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:textColor="@color/dimgray"
-                            android:text="点击查看本次考试详情"
-                            android:textSize="12dp" />
-
-                        <ImageView
-                            android:id="@+id/Activity_Student_Mainpage_ImageView_PartingLine9"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Student_Mainpage_TextView_LastExamDetails1"
-                            android:layout_marginLeft="10dp"
-                            android:src="@drawable/partingline" />
-
-
-                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

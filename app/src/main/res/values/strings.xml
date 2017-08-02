@@ -18,7 +18,7 @@
     <string name="Notice_Edit_Deliver">发布</string>
     <string name="Notice_Edit_Theme1">通知主题：</string>
     <string name="Notice_Edit_Theme2">Theme2</string>
-    <string name="Notice_Edit_Body1">通知正文</string>
+    <string name="Notice_Edit_Body1">通知正文：</string>
     <string name="Notice_Edit_Body2">Body2</string>
     <string name="Notice_Edit_Picture">添加图片</string>
     <string name="Notice_Edit_Cancel">取消发送</string>
