@@ -104,13 +104,15 @@
         android:textSize="18dp"
          android:textColor="@color/black"
         android:text="姓名:" />
-                <TextView
+            <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="8dp"
         android:textSize="18dp"
-        android:text="XXX" />
+        android:text="XXX"
+                android:textColor="@color/black"
+                android:id="@+id/Activity_Detail_TextView_UserName"/>
       </LinearLayout>
       
    <LinearLayout
@@ -131,13 +133,16 @@
          android:textColor="@color/black"
         android:textSize="18dp"
         android:text="手机号:" />
-                <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="8dp"
-        android:textSize="18dp"
-        android:text="XXX" />
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="8dp"
+            android:textSize="18dp"
+           android:textColor="@color/black"
+           android:text="xxxxxxx"
+           android:id="@+id/Activity_Detail_TextView_PhoneNum"/>
+
       </LinearLayout>
 	
   
@@ -160,7 +165,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
          android:textColor="@color/black"
-        android:text="XXX" />
+        android:text="XXX"
+            android:id="@+id/Detail_student_name"/>
 	</LinearLayout>
  <ImageView
         android:layout_width="match_parent"

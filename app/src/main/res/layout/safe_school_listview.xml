@@ -4,6 +4,64 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical" >
+    <LinearLayout
+    android:id="@+id/Safe_School_Detail_LinearLayout_BlueBar"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:background="#0e7aac"
+
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dip"
+        android:id="@+id/Acticity_Mark_Mainpage_LinearLayout_Left"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        >
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/Safe_School_Detail_ImageView_Left"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/left"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/Safe_School_Detail_LinearLayout_More"
+        android:layout_gravity="end"
+        >
+
+        <ImageView
+            android:id="@+id/Activity_LatestImageView_Bell"
+            android:layout_width="25dp"
+
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bell" />
+
+        <ImageView
+            android:id="@+id/Safe_School_Detail_ImageView_People"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/people" />
+
+        <ImageView
+            android:id="@+id/Safe_School_Detail_ImageView_More"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/add" />
+    </LinearLayout>
+
+
+</LinearLayout>
 
     <TextView
             android:id="@+id/activity_safe_school_showTextlead"

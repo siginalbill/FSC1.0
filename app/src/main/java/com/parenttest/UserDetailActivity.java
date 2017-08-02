@@ -5,9 +5,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -19,10 +22,21 @@ import android.widget.TextView;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
+
+import com.server.GetImage;
 import com.server.HttpConnectUtil;
 import com.server.WebServerHelp;
 
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,7 +44,11 @@ public class UserDetailActivity extends Activity {
     private static int RESULT_LOAD_IMAGE = 1;
     String picturePath;
     ApplicationUser user;
+    Handler handler;
     Intent i;
+    TextView infor_UserName,infor_PhoneNum, infor_ChildrenName;
+    ImageView iv_img;
+    Bitmap img;
 
     static final String TAG = "FSC";
     static final int MY_PERMISSIONS_REQUEST_READ_MEDIA = 0x120;
@@ -49,7 +67,103 @@ public class UserDetailActivity extends Activity {
 
         TextView tv_updateimg = (TextView) findViewById(R.id.textView_updataimg);
         tv_updateimg.setOnClickListener(mc);
+        /***************************************************************************/
+        infor_UserName = (TextView) findViewById(R.id.Activity_Detail_TextView_UserName);
+        infor_PhoneNum = (TextView) findViewById(R.id.Activity_Detail_TextView_PhoneNum);
+        infor_ChildrenName = (TextView) findViewById(R.id.Detail_student_name);
+        iv_img = (ImageView)findViewById(R.id.imageView_Head);
 
+        final JSONObject requestJson = new JSONObject();
+        try {
+            requestJson.put("user_id", user.user_id);
+            requestJson.put("user_flag", user.user_flag);
+            requestJson.put("user_pwd", user.user_pwd);
+            requestJson.put("action", "getDetail");
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        //
+        final String content = String.valueOf(requestJson);
+        handler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                int flag=msg.what;
+                if(flag==0x123)
+                {
+                    JSONObject parentJSON = (JSONObject)msg.obj;
+                    try{
+                        JSONObject studentJSON = (JSONObject)parentJSON.getJSONObject("student");
+                        String img_url = parentJSON.getString("user_img");
+                        infor_UserName.setText(parentJSON.getString("user_trueName"));
+                        infor_PhoneNum.setText(parentJSON.getString("user_tel"));
+                        infor_ChildrenName.setText(studentJSON.getString("student_name"));
+                        if (img_url != null){
+                            iv_img.setImageBitmap(img);
+                        }
+
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+
+                }
+
+            }
+        };
+        new Thread() {
+
+            public void run() {
+                Message message = handler.obtainMessage();
+
+                try {
+                    URL url = new URL(WebServerHelp.getURL() + "GetUserDetail");
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setConnectTimeout(5000);
+                    conn.setDoOutput(true);// 设置允许输出
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8"); // 内容类型
+                    OutputStream os = conn.getOutputStream();
+                    os.write(content.getBytes());
+                    os.close();
+
+                    if (conn.getResponseCode() == 200) {
+
+
+                    } else {
+                        handler.sendEmptyMessage(0x120);
+                    }
+                    InputStream inStream = conn.getInputStream();
+                    ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+                    int len = 0;
+                    byte[] data = new byte[1024];
+                    while ((len = inStream.read(data)) != -1) {
+                        outStream.write(data, 0, len);
+
+                    }
+                    inStream.close();
+                    String returnString = new String(outStream.toByteArray());
+                    JSONObject rJson = new JSONObject(returnString);
+
+                    img = GetImage.getInternetPicture(rJson.getString("user_img"));
+
+                    message.obj = rJson;
+                    message.what = 0x123;
+
+                    if (rJson.getInt("login_flag") == 1) {
+
+                        handler.sendMessage(message);
+
+                    } else {
+                        handler.sendEmptyMessage(0x120);
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
 
     }
 
@@ -139,4 +253,5 @@ public class UserDetailActivity extends Activity {
         ImageView imageView = (ImageView) findViewById(R.id.imageView_Head);
         imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
     }
+
 }

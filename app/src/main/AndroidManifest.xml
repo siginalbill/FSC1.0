@@ -3,8 +3,8 @@
     package="com.example.vic_sun.fsc">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MyApplication"
@@ -35,11 +35,15 @@
         <activity android:name="com.parenttest.Activity_HandText" />
         <activity android:name="com.parenttest.MediaPlayerDemo_Video" />
         <activity android:name="com.teachertest.CheckDetail" />
-        <activity android:name="com.parenttest.UserDetailActivity"></activity>
-        <activity android:name="com.studenttest.Activity_Matk_Mainpage"></activity>
-        <activity android:name="com.studenttest.Activity_Mark_Student_Page"></activity>
-        <activity android:name="com.parenttest.safe_school_list"></activity>
-        <activity android:name="com.parenttest.safe_school_detail"></activity>
+        <activity android:name="com.parenttest.UserDetailActivity" />
+        <activity android:name="com.studenttest.Activity_Matk_Mainpage" />
+        <activity android:name="com.studenttest.Activity_Mark_Student_Page" />
+        <activity android:name="com.parenttest.safe_school_list" />
+        <activity android:name="com.parenttest.safe_school_detail" />
+        <activity android:name="com.parenttest.Message_Hand"></activity>
+        <activity android:name="com.parenttest.release_message_main"></activity>
+        <activity android:name="com.parenttest.release_message_detail"></activity>
+
     </application>
 
 </manifest>

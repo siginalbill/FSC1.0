@@ -235,7 +235,8 @@ public class Mainpage_parent extends Activity {
                 intent.putExtra(MEDIA, STREAM_VIDEO);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function3) {
-
+                Intent intent = new Intent(Mainpage_parent.this, release_message_main.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function4) {
 
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function5) {
