@@ -398,7 +398,7 @@
                             android:textColor="@color/dimgray"
                             android:layout_marginTop="5dp"
                             android:text="每个家长交班费10000000元。"
-                            android:textSize="12dp" />
+                            />
 
                         <ImageView
                             android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine3"
@@ -428,7 +428,7 @@
                             android:textColor="@color/dimgray"
                             android:layout_marginTop="5dp"
                             android:text="每个家长交材料费30000元。"
-                            android:textSize="12dp" />
+                            />
 
                     </RelativeLayout>
 
@@ -480,7 +480,7 @@
                             android:layout_marginTop="5dp"
                             android:textColor="@color/dimgray"
                             android:text="别下河swim"
-                            android:textSize="12dp" />
+                            />
 
                         <ImageView
                             android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine5"

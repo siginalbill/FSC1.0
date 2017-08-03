@@ -68,10 +68,7 @@ public class Mainpage_leader extends Activity {
         iv_add.setOnClickListener(mc);
         iv_bell.setOnClickListener(mc);
         iv_people.setOnClickListener(mc);
-        tx_newslead.setOnClickListener(mc);
-        tx_newscontent.setOnClickListener(mc);
-        tx_informlead1.setOnClickListener(mc);
-        tx_informcontent1.setOnClickListener(mc);
+
         inform.setOnClickListener(mc);
         ednews.setOnClickListener(mc);
         informfunction.setOnClickListener(mc);
@@ -112,6 +109,7 @@ public class Mainpage_leader extends Activity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        break;
 
 
                 }
@@ -144,7 +142,7 @@ public class Mainpage_leader extends Activity {
                     InputStream inStream = conn.getInputStream();
                     ByteArrayOutputStream outStream = new ByteArrayOutputStream();
                     int len = 0;
-                    byte[] data = new byte[5120];
+                    byte[] data = new byte[1024];
                     while ((len = inStream.read(data)) != -1) {
                         outStream.write(data, 0, len);
 
@@ -164,7 +162,7 @@ public class Mainpage_leader extends Activity {
                     message.what = 1;
 
                     if (rJson == null) {
-                        handler.sendMessage(message);
+                        handler.sendEmptyMessage(2);
 
 
                     } else {

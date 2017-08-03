@@ -160,6 +160,7 @@ public class Mainpage_parent extends Activity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        break;
 
 
                 }

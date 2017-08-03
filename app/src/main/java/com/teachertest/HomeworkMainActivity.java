@@ -83,7 +83,7 @@ public class HomeworkMainActivity extends Activity {
                             Intent intent = new Intent(HomeworkMainActivity.this, homework_detail.class);
                             Bundle bundle = new Bundle();
                             try{
-                                bundle.putString("homework_id", ((JSONObject)homeworkJson.get(position)).getString("homework_id"));
+                                bundle.putLong("homework_id", ((JSONObject)homeworkJson.get(position)).getLong("homework_id"));
                                 bundle.putString("homework_date", ((JSONObject)homeworkJson.get(position)).getString("homework_date"));
                                 bundle.putString("chinese", ((JSONObject)homeworkJson.get(position)).getString("chinese"));
                                 bundle.putString("english", ((JSONObject)homeworkJson.get(position)).getString("english"));

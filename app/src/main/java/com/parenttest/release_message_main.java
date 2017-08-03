@@ -98,8 +98,9 @@ public class release_message_main extends Activity {
                                 bundle.putString("message_date", ((JSONObject)messagelistJson.get(position)).getString("message_date"));
                                 bundle.putString("message_writer", ((JSONObject)messagelistJson.get(position)).getString("message_writer"));
                                 bundle.putString("message_content", ((JSONObject)messagelistJson.get(position)).getString("message_content"));
-                                bundle.putString("message_img", ((JSONObject)messagelistJson.get(position)).getString("message_img"));
+
                                 bundle.putInt("writer_flag", ((JSONObject)messagelistJson.get(position)).getInt("message_writerflag"));
+                                bundle.putString("message_img", ((JSONObject)messagelistJson.get(position)).getString("message_img"));
                                 bundle.putString("parent_img", ((JSONObject)messagelistJson.get(position)).getString("parent_img"));
                             }catch (Exception e){
                                 e.printStackTrace();
@@ -147,7 +148,13 @@ public class release_message_main extends Activity {
 
                     images = new Bitmap[rJson.length()];
                     for (int i = 0; i < rJson.length(); i++){
-                        images[i] = GetImage.getInternetPicture(((JSONObject)rJson.get(i)).getString("parent_img"));
+                        if((((JSONObject)rJson.get(i)).getInt("message_writerflag") == 0 )&& ((JSONObject)rJson.get(i)).getString("message_writerflag")!=null){
+
+                            images[i] = GetImage.getInternetPicture(((JSONObject)rJson.get(i)).getString("parent_img"));
+                        }else {
+                            images[i] = null;
+                        }
+
                     }
 
                     message.obj = rJson;

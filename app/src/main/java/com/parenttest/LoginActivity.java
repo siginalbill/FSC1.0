@@ -51,8 +51,8 @@ public class LoginActivity extends Activity {
 
         btn = (Button) findViewById(R.id.Button_Login);
         btn.setOnClickListener(mc);
-        tv_regist = (TextView) findViewById(R.id.Button_Login) ;
-        btn.setOnClickListener(mc);
+        tv_regist = (TextView) findViewById(R.id.activity_login_button_zhuce) ;
+        tv_regist.setOnClickListener(mc);
         sp_choice = (Spinner) findViewById(R.id.activity_login_spinner);
         sp_choice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -195,7 +195,7 @@ public class LoginActivity extends Activity {
                         }
                     }.start();
 
-                } else {
+                } else if (V.getId() == R.id.activity_login_button_zhuce) {
                     intent = new Intent(LoginActivity.this, RegisterActivity.class);
                     startActivity(intent);
                 }

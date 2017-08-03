@@ -162,6 +162,7 @@ public class Mainpage_teacher extends Activity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        break;
 
 
                 }
@@ -214,9 +215,7 @@ public class Mainpage_teacher extends Activity {
                     message.what = 1;
 
                     if (rJson == null) {
-                        handler.sendMessage(message);
-                        tst = Toast.makeText(Mainpage_teacher.this, "那就失败了", Toast.LENGTH_SHORT);
-                        tst.show();
+                        handler.sendEmptyMessage(2);
 
                     } else {
                         handler.sendMessage(message);
@@ -263,11 +262,12 @@ public class Mainpage_teacher extends Activity {
                 Intent intent = new Intent(Mainpage_teacher.this, education_news_main_others.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function8) {
+                Intent intent = new Intent(Mainpage_teacher.this, CheckList.class);
+                startActivity(intent);
+
+            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_LinearLayout_Function9){
 
                 Intent intent = new Intent(Mainpage_teacher.this, activity_allfunctions.class);
-                startActivity(intent);
-            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_LinearLayout_Function9){
-                Intent intent = new Intent(Mainpage_teacher.this, CheckList.class);
                 startActivity(intent);
 
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_People) {

@@ -98,16 +98,8 @@ public class Mainpage_student extends Activity {
         remark.setOnClickListener(mc);
         ednews.setOnClickListener(mc);
         more.setOnClickListener(mc);
-        tx_newslead.setOnClickListener(mc);
-        tx_newscontent.setOnClickListener(mc);
-        tx_informlead1.setOnClickListener(mc);
-        tx_informcontent1.setOnClickListener(mc);
 
 
-        tx_messagelead1.setOnClickListener(mc);
-        tx_messagecontent1.setOnClickListener(mc);
-        tx_messagelead2.setOnClickListener(mc);
-        tx_messagecontent2.setOnClickListener(mc);
         ednews.setOnClickListener(mc);
 
         newsfunction.setOnClickListener(mc);
@@ -159,6 +151,7 @@ public class Mainpage_student extends Activity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        break;
 
 
                 }
@@ -211,7 +204,7 @@ public class Mainpage_student extends Activity {
                     message.what = 1;
 
                     if (rJson == null) {
-                        handler.sendMessage(message);
+                        handler.sendEmptyMessage(2);
 
 
                     } else {

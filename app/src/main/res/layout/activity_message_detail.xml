@@ -39,8 +39,8 @@
         <ImageView
             android:id="@+id/activity_message_head"
             android:layout_marginLeft="20dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/parent" />
 
         <LinearLayout

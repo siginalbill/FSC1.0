@@ -28,7 +28,7 @@
                 android:layout_height="25dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/left" />
+                android:src="@drawable/left" />
         </LinearLayout>
 
 
@@ -126,7 +126,8 @@
                 android:padding="5dp"
                 android:text="content"
                 android:textColor="@color/black"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:lineSpacingMultiplier="2"/>
 
 
         </ScrollView>
