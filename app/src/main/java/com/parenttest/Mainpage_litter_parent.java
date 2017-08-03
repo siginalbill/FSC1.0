@@ -5,8 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.example.vic_sun.fsc.R;
+import com.leadertest.education_news_main_others;
+import com.studenttest.Mainpage_student;
 import com.teachertest.CheckList;
 
 
@@ -25,11 +29,16 @@ public class Mainpage_litter_parent extends Activity {
         ImageView iv_video = (ImageView) findViewById(R.id.Activity_Parent_Mainpage_ImageView_Function2) ;
         ImageView iv_others = (ImageView) findViewById(R.id.Activity_Parent_Mainpage_ImageView_Function8) ;
 
+        RelativeLayout ly = (RelativeLayout)findViewById(R.id.Activity_Parent_Mainpage_RelativeLayout_EducationNews) ;
+        LinearLayout ly_news = (LinearLayout)findViewById(R.id.Activity_Parent_Mainpage_LinearLayout_Function7) ;
+
         MyClickListener mc = new MyClickListener();
 
         iv_addcheck.setOnClickListener(mc);
         iv_video.setOnClickListener(mc);
         iv_others.setOnClickListener(mc);
+        ly.setOnClickListener(mc);
+        ly_news.setOnClickListener(mc);
 
     }
 
@@ -40,12 +49,14 @@ public class Mainpage_litter_parent extends Activity {
                 Intent intent = new Intent(Mainpage_litter_parent.this, Activity_HandText.class);
                 startActivity(intent);
 
+            }else if (V.getId() == R.id.Activity_Parent_Mainpage_LinearLayout_Function7) {
+                Intent intent = new Intent(Mainpage_litter_parent.this, education_news_main_others.class);
+                startActivity(intent);
             }
-            else if (V.getId() == R.id.Activity_Parent_Mainpage_LinearLayout_Function2){
 
-            }
             else {
-
+                Intent intent = new Intent(Mainpage_litter_parent.this, Activity_HandText.class);
+                startActivity(intent);
             }
         }
     }

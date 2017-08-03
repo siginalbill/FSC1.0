@@ -20,7 +20,16 @@ import android.widget.Toast;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
+import com.leadertest.Activity_NoticeList;
+import com.leadertest.education_news_main_others;
+import com.publicpage.Activity_ErrorPage;
+import com.publicpage.Activity_NewInform;
 import com.server.WebServerHelp;
+import com.studenttest.Activity_Matk_Mainpage;
+import com.studenttest.Mainpage_student;
+import com.studenttest.activity_allfunctions;
+import com.teachertest.Activity_Remark;
+import com.teachertest.HomeworkMainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,7 +50,7 @@ public class Mainpage_parent extends Activity {
     JSONObject rJson;
     ImageView homework, moniter, message, safeschool, grade, remark, ednews, more;
     Intent intent;
-    RelativeLayout informfunction1, newsfunction, informfunction2, messagefunction1, messagefunction2;
+    RelativeLayout informfunction, newsfunction, messagefunction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,8 +71,9 @@ public class Mainpage_parent extends Activity {
         ednews = (ImageView) findViewById(R.id.Activity_Parent_Mainpage_ImageView_Function7);
         more = (ImageView) findViewById(R.id.Activity_Parent_Mainpage_ImageView_Function8);
 
-        informfunction1 = (RelativeLayout) findViewById((R.id.Activity_Parent_Mainpage_RelativeLayout_LatestNewsDetails));
         newsfunction = (RelativeLayout) findViewById((R.id.Activity_Parent_Mainpage_RelativeLayout_EducationNews));
+        informfunction = (RelativeLayout) findViewById((R.id.message));
+        messagefunction = (RelativeLayout) findViewById((R.id.Activity_Parent_Mainpage_RelativeLayout_LatestNewsDetails));
 
         tx_newslead = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_EducationNewsLeader);
         tx_newscontent = (TextView) findViewById(R.id.Activity_Parent_Mainpage_TextView_EducationNewsDetails);
@@ -99,11 +109,12 @@ public class Mainpage_parent extends Activity {
         tx_messagelead2.setOnClickListener(mc);
         tx_messagecontent2.setOnClickListener(mc);
         ednews.setOnClickListener(mc);
-        newsfunction.setOnClickListener(mc);
-
-        informfunction1.setOnClickListener(mc);
 
         newsfunction.setOnClickListener(mc);
+
+        informfunction.setOnClickListener(mc);
+
+        messagefunction.setOnClickListener(mc);
 
 
         user = mApplication.getUser();
@@ -226,7 +237,8 @@ public class Mainpage_parent extends Activity {
         @Override
         public void onClick(View V) {
             if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function1) {
-
+                Intent intent = new Intent(Mainpage_parent.this, HomeworkMainActivity.class);
+                startActivity(intent);
 
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function2) {
                 final String MEDIA = "media";
@@ -238,27 +250,39 @@ public class Mainpage_parent extends Activity {
                 Intent intent = new Intent(Mainpage_parent.this, release_message_main.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function4) {
-
+                Intent intent = new Intent(Mainpage_parent.this, safe_school_list.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function5) {
-
+                Intent intent = new Intent(Mainpage_parent.this, Activity_Matk_Mainpage.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function6) {
-
+                Intent intent = new Intent(Mainpage_parent.this, Activity_Remark.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function7) {
-
+                Intent intent = new Intent(Mainpage_parent.this, education_news_main_others.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function8) {
-
+                Intent intent = new Intent(Mainpage_parent.this, activity_allfunctions.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_People) {
                 Intent intent = new Intent(Mainpage_parent.this, UserDetailActivity.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_More) {
-
+                intent = new Intent(Mainpage_parent.this, Activity_ErrorPage.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Bell) {
 
-
-            } else if (V.getId() == R.id.Activity_Parent_Mainpage_RelativeLayout_LatestNews) {
-
-            } else if (V.getId() == R.id.Activity_Parent_Mainpage_RelativeLayout_LatestNewsDetails) {
-
+                Intent intent = new Intent(Mainpage_parent.this, Activity_NewInform.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.Activity_Parent_Mainpage_RelativeLayout_EducationNews) {
+                Intent intent = new Intent(Mainpage_parent.this, education_news_main_others.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.message) {
+                Intent intent = new Intent(Mainpage_parent.this, release_message_main.class);
+                startActivity(intent);
+            }else if (V.getId() == R.id.Activity_Parent_Mainpage_RelativeLayout_LatestNewsDetails) {
+                Intent intent = new Intent(Mainpage_parent.this, Activity_NoticeList.class);
+                startActivity(intent);
             }
         }
 

@@ -18,52 +18,19 @@
 
         android:orientation="horizontal">
         <LinearLayout
-            android:layout_width="0dip"
+            android:layout_width="match_parent"
             android:id="@+id/Acticity_LatestNews_LinearLayout_Left"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="35dp"
 
             >
             <ImageView
                 android:layout_width="15dp"
-                android:layout_height="20dp"
+                android:layout_height="25dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/Activity_LatestImageView_Left"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/left"
                 />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/Activity_LatestNews_LinearLayout_More"
-            android:layout_gravity="end"
-            >
-
-            <ImageView
-                android:id="@+id/Activity_LatestImageView_Bell"
-                android:layout_width="25dp"
-
-                android:layout_height="25dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bell" />
-
-            <ImageView
-                android:id="@+id/Activity_EducationNews_Main_People"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/people" />
-
-            <ImageView
-                android:id="@+id/Activity_EducationNews_Main_More"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/add" />
         </LinearLayout>
 
 

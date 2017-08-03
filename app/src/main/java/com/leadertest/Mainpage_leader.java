@@ -19,7 +19,10 @@ import android.widget.Toast;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
+import com.publicpage.Activity_ErrorPage;
+import com.publicpage.Activity_NewInform;
 import com.server.WebServerHelp;
+import com.studenttest.Mainpage_student;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,12 +58,12 @@ public class Mainpage_leader extends Activity {
         iv_add=(ImageView)findViewById(R.id.Activity_Leader_Mainpage_ImageView_More);
         inform = (ImageView) findViewById(R.id.Acticity_Leader_Mainpage_ImageView_Function1);
         ednews = (ImageView) findViewById(R.id.Acticity_Leader_Mainpage_ImageView_Function2);
-        informfunction=(RelativeLayout) findViewById((R.id.Acticity_Leader_Mainpage_RelativeLayout_LatestNews));
+        informfunction=(RelativeLayout) findViewById((R.id.Acticity_Leader_Mainpage_RelativeLayout_LatestNewsDetails));
         newsfunction=(RelativeLayout) findViewById((R.id.Acticity_Leader_Mainpage_RelativeLayout_EducationNews));
         tx_newslead = (TextView) findViewById(R.id.Acticity_Leader_Mainpage_TextView_EducationNewsLeader);
         tx_newscontent = (TextView) findViewById(R.id.Acticity_Leader_Mainpage_TextView_EducationNewsDetails);
         tx_informlead1 = (TextView) findViewById(R.id.Acticity_Leader_Mainpage_TextView_LatestNewsLeader1);
-        tx_informcontent1 = (TextView) findViewById(R.id.Acticity_Leader_Mainpage_TextView_EducationNewsLeader);
+        tx_informcontent1 = (TextView) findViewById(R.id.Acticity_Leader_Mainpage_TextView_LatestNewsDetails1);
 
         iv_add.setOnClickListener(mc);
         iv_bell.setOnClickListener(mc);
@@ -189,21 +192,26 @@ public class Mainpage_leader extends Activity {
                 Intent intent = new Intent(Mainpage_leader.this, Activity_Notice.class);
                 startActivity(intent);
             }else if(V.getId() == R.id.Acticity_Leader_Mainpage_RelativeLayout_EducationNews){
-
+                Intent intent = new Intent(Mainpage_leader.this, education_news_main_others.class);
+                startActivity(intent);
             }
             else if(V.getId() == R.id.Acticity_Leader_Mainpage_RelativeLayout_LatestNewsDetails){
-
+                Intent intent = new Intent(Mainpage_leader.this, Activity_NoticeList.class);
+                startActivity(intent);
             }
             else if(V.getId() == R.id.Activity_Leader_Mainpage_ImageView_People){
-
+                Intent intent = new Intent(Mainpage_leader.this, Activity_ErrorPage.class);
+                startActivity(intent);
             }
 
             else if(V.getId() == R.id.Activity_Leader_Mainpage_ImageView_More){
-
+                Intent intent = new Intent(Mainpage_leader.this, Activity_ErrorPage.class);
+                startActivity(intent);
             }
 
             else if(V.getId() == R.id.Activity_Leader_Mainpage_ImageView_Bell){
-
+                Intent intent = new Intent(Mainpage_leader.this, Activity_NewInform.class);
+                startActivity(intent);
             }
 
 

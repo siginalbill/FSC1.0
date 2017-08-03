@@ -13,7 +13,7 @@
         android:padding="5dp" >
 
         <ImageButton
-            android:id="@+id/activity_gerenliuyan_imagebutton_fanhui"
+            android:id="@+id/activity_gerenliuyan_imagebutton_back"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

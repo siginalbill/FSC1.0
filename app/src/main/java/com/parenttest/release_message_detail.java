@@ -50,6 +50,14 @@ public class release_message_detail extends Activity{
         iv_head = (ImageView)findViewById(R.id.activity_message_head);
         iv_image = (ImageView)findViewById(R.id.activity_message_img);
 
+        ImageView iv_back = (ImageView)findViewById(R.id.Activity_Mark_Teacher_Page_ImageView_Left);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {

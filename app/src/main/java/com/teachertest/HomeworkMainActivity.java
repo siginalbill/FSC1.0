@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,6 +44,9 @@ public class HomeworkMainActivity extends Activity {
         mApplication = (MyApplication) getApplication();
         user = mApplication.getUser();
         MyClickListener mc = new MyClickListener();
+
+        ImageView iv_back = (ImageView) findViewById(R.id.homework_back);
+        iv_back.setOnClickListener(mc);
 
         tv_hand = (TextView)findViewById(R.id.activity_handhomework_hand);
         tv_hand.setOnClickListener(mc);
@@ -220,6 +224,9 @@ public class HomeworkMainActivity extends Activity {
                 Bundle bundle = new Bundle();
                 intent.putExtras(bundle);
                 startActivity(intent);
+            }
+            else if (V.getId() == R.id.homework_back){
+                finish();
             }
 
         }

@@ -31,7 +31,7 @@
             android:text="家长信息"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="23sp"
+            android:textSize="20sp"
             android:layout_gravity="center"
             />
 

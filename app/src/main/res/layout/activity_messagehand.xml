@@ -13,9 +13,10 @@
         <LinearLayout
             android:layout_width="0dip"
             android:id="@+id/Acticity_LatestNews_LinearLayout_Left"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
             android:layout_weight="1"
             android:orientation="vertical"
+
 
             >
             <ImageView

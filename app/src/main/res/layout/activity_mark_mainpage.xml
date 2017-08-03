@@ -28,69 +28,19 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/left"
                 />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:id="@+id/Activity_Mark_Mainpage_LinearLayout_More"
-            android:layout_gravity="end"
-            >
-
-            <ImageView
-                android:id="@+id/Activity_LatestImageView_Bell"
-                android:layout_width="25dp"
-
-                android:layout_height="25dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bell" />
-
-            <ImageView
-                android:id="@+id/Activity_Mark_Mainpage_ImageView_People"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/people" />
-
-            <ImageView
-                android:id="@+id/Activity_Mark_Mainpage_ImageView_More"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/add" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="查看成绩"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
 
 
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/Activity_Mark_Mainpage_Leader1"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_gravity="center"
-        android:orientation="vertical"
 
-        >
-
-        <TextView
-            android:id="@+id/Activity_Mark_Mainpage_TextView_LatestNews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:layout_weight="1"
-            android:text="成绩管理"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/partingline"
-            android:id="@+id/Activity_Mark_Mainpage_ImageView_PartingLine1"
-            />
-
-    </LinearLayout>
 
     <ListView
         android:id="@+id/Activity_Mark_Mainpage_ListView"

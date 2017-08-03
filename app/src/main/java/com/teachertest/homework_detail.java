@@ -2,6 +2,8 @@ package com.teachertest;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vic_sun.fsc.R;
@@ -15,6 +17,8 @@ public class homework_detail extends Activity {
     TextView homework_dataview_math_date ;
     TextView homework_dataview_english ;
     TextView homework_dataview_english_date ;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +35,33 @@ public class homework_detail extends Activity {
 
 
         homework_dataview_date.setText(bundle.getString("homework_date"));
-        homework_dataview_chinese.setText(bundle.getString("chinese"));
+        try{
+            homework_dataview_chinese.setText(bundle.getString("chinese"));
+        }catch (Exception e){
 
-        homework_dataview_math.setText(bundle.getString("math"));
+        }
+        try{
 
-        homework_dataview_english.setText(bundle.getString("english"));
+            homework_dataview_math.setText(bundle.getString("math"));
+;
+        }catch (Exception e){
+
+        }
+        try{
+
+            homework_dataview_english.setText(bundle.getString("english"));
+        }catch (Exception e){
+
+        }
+
+
+        ImageView iv_back = (ImageView)findViewById(R.id.Activity_Mark_Student_Page_ImageView_Left);
+        iv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 

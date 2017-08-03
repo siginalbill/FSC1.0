@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -56,6 +57,9 @@ public class release_message_main extends Activity {
         hand = (TextView)findViewById(R.id.activity_gerenliuyan_textview_huifu);
         MyClickListener mc = new MyClickListener();
         hand.setOnClickListener(mc);
+
+        ImageButton ib_back = (ImageButton)findViewById(R.id.activity_gerenliuyan_imagebutton_back);
+        ib_back.setOnClickListener(mc);
 
         final JSONObject requestJson = new JSONObject();
         try {
@@ -273,6 +277,9 @@ public class release_message_main extends Activity {
                 Intent intent = new Intent(release_message_main.this, Message_Hand.class);
 
                 startActivity(intent);
+            }
+            else if (V.getId() == R.id.activity_gerenliuyan_imagebutton_back){
+                finish();
             }
 
         }

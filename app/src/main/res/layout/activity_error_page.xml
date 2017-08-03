@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.publicpage.Activity_ErrorPage"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/Activity_LatestNews_LinearLayout_BlueBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/color_TitleBar"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/Acticity_newinform_LinearLayout_Left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:id="@+id/Activity_newinformImageView_Left"
+                android:layout_width="15dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/left" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_EducationNews">
+        <ImageView
+            android:id="@+id/Acticity_Leader_Mainpage_ImageView_PartingLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/partingline" />
+
+        <TextView
+            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNews"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/dimgray"
+            android:text="系统消息"
+            android:textSize="10dp" />
+
+
+
+        <TextView
+            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNews"
+            android:layout_marginLeft="10dp"
+            android:text="无权限访问"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/Activity_Error_TextView_User"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="用户"
+            android:textColor="@color/black"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:text="暂时无权限访问该功能，家长用户修改用户信息请返回主页右上角头像修改。"
+            android:layout_alignLeft="@id/Activity_Error_TextView_User"
+            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

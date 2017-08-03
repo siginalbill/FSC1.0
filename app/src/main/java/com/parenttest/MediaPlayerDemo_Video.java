@@ -23,6 +23,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.vic_sun.fsc.R;
@@ -62,6 +64,14 @@ public class MediaPlayerDemo_Video extends Activity implements OnBufferingUpdate
 		super.onCreate(icicle);
 		Vitamio.isInitialized(getApplicationContext());
 		setContentView(R.layout.mediaplayer_2);
+
+		ImageView iv_back = (ImageView)findViewById(R.id.Activity_LatestImageView_Left) ;
+		iv_back.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
 		mPreview = (SurfaceView) findViewById(R.id.surface);
 		holder = mPreview.getHolder();
 		holder.addCallback(this);

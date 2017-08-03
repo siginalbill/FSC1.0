@@ -47,11 +47,13 @@
         <activity android:name="com.leadertest.Activity_NoticeList" />
         <activity android:name="com.teachertest.Activity_EditRemark" />
         <activity android:name="com.teachertest.Activity_Remark" />
-        <activity android:name="com.leadertest.Activity_Notice_Detail"></activity>
-        <activity android:name="com.studenttest.activity_allfunctions"></activity>
-        <activity android:name="com.teachertest.homework_detail"></activity>
-        <activity android:name="com.teachertest.homework_edit"></activity>
-        <activity android:name="com.teachertest.HomeworkMainActivity"></activity>
+        <activity android:name="com.leadertest.Activity_Notice_Detail" />
+        <activity android:name="com.studenttest.activity_allfunctions" />
+        <activity android:name="com.teachertest.homework_detail" />
+        <activity android:name="com.teachertest.homework_edit" />
+        <activity android:name="com.teachertest.HomeworkMainActivity" />
+        <activity android:name="com.publicpage.Activity_ErrorPage" />
+        <activity android:name="com.publicpage.Activity_NewInform"></activity>
     </application>
 
 </manifest>

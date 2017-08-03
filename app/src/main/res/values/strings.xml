@@ -23,5 +23,6 @@
     <string name="Notice_Edit_Picture">添加图片</string>
     <string name="Notice_Edit_Cancel">取消发送</string>
     <string name="title_activity_parent_main_page">ParentMainPageActivity</string>
+    <string name="app_inform">华迪家校通（Hwadee Families School Communication，简写：Hwadee-FSC）是指利用无线通信技术和网络技术搭建的家校互通平台，为家校之间提供充分、准确、及时的沟通方式，为全面监控学生和学生成长提供有效的途径，该平台运行于移动终端，家长、学生、教师、领导都可以通过智能手机、平板电脑等媒介进行沟通和信息传递。</string>
 
 </resources>

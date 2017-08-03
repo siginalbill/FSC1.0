@@ -20,8 +20,17 @@ import android.widget.Toast;
 import com.bean.ApplicationUser;
 import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
+import com.leadertest.Activity_NoticeList;
+import com.leadertest.education_news_main_others;
 import com.parenttest.MediaPlayerDemo_Video;
+import com.parenttest.release_message_main;
+import com.parenttest.safe_school_list;
+import com.publicpage.Activity_ErrorPage;
+import com.publicpage.Activity_NewInform;
 import com.server.WebServerHelp;
+import com.studenttest.Activity_Matk_Mainpage;
+import com.studenttest.Mainpage_student;
+import com.studenttest.activity_allfunctions;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,7 +51,7 @@ public class Mainpage_teacher extends Activity {
     JSONObject rJson;
     ImageView homework, moniter, message, safeschool, grade, remark, ednews,check, more;
     Intent intent;
-    RelativeLayout informfunction1, newsfunction, informfunction2, messagefunction1, messagefunction2;
+    RelativeLayout informfunction, newsfunction, messagefunction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +74,10 @@ public class Mainpage_teacher extends Activity {
         ednews = (ImageView) findViewById(R.id.Activity_Teacher_Mainpage_ImageView_Function7);
         check =(ImageView)findViewById(R.id.Activity_Teacher_Mainpage_ImageView_Function8);
         more = (ImageView) findViewById(R.id.Activity_Teacher_Mainpage_ImageView_Function9);
-        informfunction1 = (RelativeLayout) findViewById((R.id.Activity_Teacher_Mainpage_RelativeLayout_LatestNewsDetails));
+
+        informfunction = (RelativeLayout) findViewById((R.id.Activity_Teacher_Mainpage_RelativeLayout_LatestNewsDetails));
         newsfunction = (RelativeLayout) findViewById((R.id.Activity_Teacher_Mainpage_RelativeLayout_EducationNews));
+        messagefunction = (RelativeLayout) findViewById((R.id.message));
 
         tx_newslead = (TextView) findViewById(R.id.Activity_Teacher_Mainpage_TextView_EducationNewsLeader);
         tx_newscontent = (TextView) findViewById(R.id.Activity_Teacher_Mainpage_TextView_EducationNewsDetails);
@@ -102,9 +113,11 @@ public class Mainpage_teacher extends Activity {
         ednews.setOnClickListener(mc);
 
 
-        informfunction1.setOnClickListener(mc);
+        informfunction.setOnClickListener(mc);
 
         newsfunction.setOnClickListener(mc);
+
+        messagefunction.setOnClickListener(mc);
 
         user = mApplication.getUser();
 
@@ -235,31 +248,46 @@ public class Mainpage_teacher extends Activity {
                 intent.putExtra(MEDIA, STREAM_VIDEO);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function3) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, release_message_main.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function4) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, safe_school_list.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function5) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, Activity_Matk_Mainpage.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function6) {
                 Intent intent = new Intent(Mainpage_teacher.this, Activity_EditRemark.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function7) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, education_news_main_others.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Function8) {
 
+                Intent intent = new Intent(Mainpage_teacher.this, activity_allfunctions.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_LinearLayout_Function9){
                 Intent intent = new Intent(Mainpage_teacher.this, CheckList.class);
                 startActivity(intent);
 
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_People) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, Activity_ErrorPage.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_More) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, CheckList.class);
+                startActivity(intent);
             } else if (V.getId() == R.id.Activity_Teacher_Mainpage_ImageView_Bell) {
-
-            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_RelativeLayout_LatestNews) {
-
-            }  else if (V.getId() == R.id.Activity_Teacher_Mainpage_RelativeLayout_LatestNewsDetails) {
-
+                Intent intent = new Intent(Mainpage_teacher.this, Activity_NewInform.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_RelativeLayout_EducationNews) {
+                Intent intent = new Intent(Mainpage_teacher.this, education_news_main_others.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.message) {
+                Intent intent = new Intent(Mainpage_teacher.this, release_message_main.class);
+                startActivity(intent);
+            } else if (V.getId() == R.id.Activity_Teacher_Mainpage_RelativeLayout_LatestNewsDetails) {
+                Intent intent = new Intent(Mainpage_teacher.this, Activity_NoticeList.class);
+                startActivity(intent);
             }
         }
 

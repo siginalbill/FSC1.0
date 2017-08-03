@@ -18,7 +18,17 @@ import com.example.vic_sun.fsc.MyApplication;
 import com.example.vic_sun.fsc.R;
 import com.leadertest.Activity_Notice;
 import com.leadertest.Activity_NoticeList;
+import com.leadertest.education_news_main_others;
+import com.parenttest.MediaPlayerDemo_Video;
+import com.parenttest.UserDetailActivity;
+import com.parenttest.release_message_main;
+import com.parenttest.safe_school_list;
+import com.publicpage.Activity_ErrorPage;
+import com.publicpage.Activity_NewInform;
 import com.server.WebServerHelp;
+import com.teachertest.Activity_Remark;
+import com.teachertest.CheckList;
+import com.teachertest.HomeworkMainActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,9 +52,7 @@ public class activity_allfunctions extends Activity{
 	        setContentView(R.layout.activity_allfunctions);
 	        
 	        iv_Left=(ImageView)findViewById(R.id.Activity_LatestImageView_Left);
-	        iv_Bell=(ImageView)findViewById(R.id.Activity_LatestImageView_Bell);
-	        iv_People=(ImageView)findViewById(R.id.Activity_LatestNews_ImageView_People);
-	        iv_More=(ImageView)findViewById(R.id.Activity_LatestNews_ImageView_More);
+
 	        
 	        homework=(ImageView)findViewById(R.id.Activity_AllFunctions_ImageView_Function1);
 	        monitor=(ImageView)findViewById(R.id.Activity_AllFunctions_ImageView_Function2);
@@ -61,9 +69,6 @@ public class activity_allfunctions extends Activity{
 	    	MyClickListener mc = new MyClickListener();
 	    	
 	    	iv_Left.setOnClickListener(mc);
-	    	iv_Bell.setOnClickListener(mc);
-	    	iv_People.setOnClickListener(mc);
-	    	iv_More.setOnClickListener(mc);
 	    	
 	    	
 	    	homework.setOnClickListener(mc);
@@ -86,51 +91,54 @@ public class activity_allfunctions extends Activity{
 		@Override
 		public void onClick(View V){
 			if (V.getId() == R.id.Activity_LatestImageView_Left) {
-
-
-			}else if(V.getId() == R.id.Activity_LatestImageView_Bell) {
-
-
-			}else if(V.getId() == R.id.Activity_LatestNews_ImageView_People) {
-
-
-			}else if(V.getId() == R.id.Activity_LatestNews_ImageView_More) {
-
-
+				finish();
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function1) {
-
+				Intent intent = new Intent(activity_allfunctions.this, HomeworkMainActivity.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function2) {
-
+				final String MEDIA = "media";
+				int STREAM_VIDEO = 5;
+				Intent intent = new Intent(activity_allfunctions.this, MediaPlayerDemo_Video.class);
+				intent.putExtra(MEDIA, STREAM_VIDEO);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function3) {
 
-
+				Intent intent = new Intent(activity_allfunctions.this, release_message_main.class);
+				startActivity(intent);
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function4) {
-
+				Intent intent = new Intent(activity_allfunctions.this, safe_school_list.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function5) {
-
+				Intent intent = new Intent(activity_allfunctions.this, Activity_Matk_Mainpage.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function6) {
-
+				Intent intent = new Intent(activity_allfunctions.this, Activity_Remark.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function7) {
-
+				Intent intent = new Intent(activity_allfunctions.this, education_news_main_others.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function8) {
 				Intent intent = new Intent(activity_allfunctions.this, Activity_NoticeList.class);
 				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function9) {
-
+				Intent intent = new Intent(activity_allfunctions.this, CheckList.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function10) {
-
+				Intent intent = new Intent(activity_allfunctions.this, Activity_ErrorPage.class);
+				startActivity(intent);
 
 			}else if(V.getId() == R.id.Activity_AllFunctions_ImageView_Function11) {
 
-
+				Intent intent = new Intent(activity_allfunctions.this, Activity_ErrorPage.class);
+				startActivity(intent);
 			}
 
 

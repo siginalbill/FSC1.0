@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.BitmapFactory;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -71,6 +72,9 @@ public class Message_Hand extends Activity {
         MyClickListener mc = new MyClickListener();
         tv_hand.setOnClickListener(mc);
         iv_pic.setOnClickListener(mc);
+
+        ImageView iv_back = (ImageView)findViewById(R.id.Activity_LatestImageView_Left);
+        iv_back.setOnClickListener(mc);
 
         handler = new Handler() {
             private Intent intent;
@@ -176,6 +180,9 @@ public class Message_Hand extends Activity {
                 } else {
                     startActivityForResult(i, RESULT_LOAD_IMAGE);
                 }
+            }
+            else if (V.getId() == R.id.Activity_LatestImageView_Left ){
+                finish();
             }
         }
 
