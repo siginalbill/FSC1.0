@@ -79,6 +79,10 @@
             android:layout_marginRight="20dp"
 
             />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shelf_category_divider"/>
         </LinearLayout>
 
     </LinearLayout>

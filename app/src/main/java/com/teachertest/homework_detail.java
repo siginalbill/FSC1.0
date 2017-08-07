@@ -37,18 +37,7 @@ public class homework_detail extends Activity {
         homework_dataview_date.setText(bundle.getString("homework_date"));
         try{
             homework_dataview_chinese.setText(bundle.getString("chinese"));
-        }catch (Exception e){
-
-        }
-        try{
-
             homework_dataview_math.setText(bundle.getString("math"));
-;
-        }catch (Exception e){
-
-        }
-        try{
-
             homework_dataview_english.setText(bundle.getString("english"));
         }catch (Exception e){
 

@@ -96,7 +96,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/test" />
+                android:src="@drawable/test"
+                android:layout_gravity="center"/>
             <ImageView
                 android:id="@+id/Activity_EducationNews_Details_ImageView_PartingLine"
                 android:layout_width="wrap_content"
