@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\project\FSC\vitamio\src\main\shaders"/></dataSet><dataSet config="release"><source path="E:\project\FSC\vitamio\src\release\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="E:\Workspaces\Android\FSC1.0-master\FSC1.0\vitamio\src\main\shaders"/></dataSet><dataSet config="release"><source path="E:\Workspaces\Android\FSC1.0-master\FSC1.0\vitamio\src\release\shaders"/></dataSet></merger>

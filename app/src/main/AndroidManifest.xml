@@ -54,6 +54,10 @@
         <activity android:name="com.teachertest.HomeworkMainActivity" />
         <activity android:name="com.publicpage.Activity_ErrorPage" />
         <activity android:name="com.publicpage.Activity_NewInform"></activity>
+        <activity android:name="com.parenttest.t1"></activity>
+        <activity android:name="com.parenttest.t2"></activity>
+        <activity android:name="com.parenttest.t3"></activity>
+
     </application>
 
 </manifest>

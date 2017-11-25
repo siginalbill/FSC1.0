@@ -242,22 +242,28 @@ public class Mainpage_parent extends Activity {
                 startActivity(intent);
 
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function2) {
-                final String MEDIA = "media";
-                int STREAM_VIDEO = 5;
-                Intent intent = new Intent(Mainpage_parent.this, MediaPlayerDemo_Video.class);
-                intent.putExtra(MEDIA, STREAM_VIDEO);
+               // final String MEDIA = "media";
+               // int STREAM_VIDEO = 5;
+                //Intent intent = new Intent(Mainpage_parent.this, MediaPlayerDemo_Video.class);
+              //  intent.putExtra(MEDIA, STREAM_VIDEO);
+               // startActivity(intent);
+                Intent intent = new Intent(Mainpage_parent.this, t1.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function3) {
                 Intent intent = new Intent(Mainpage_parent.this, release_message_main.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function4) {
-                Intent intent = new Intent(Mainpage_parent.this, safe_school_list.class);
+                //Intent intent = new Intent(Mainpage_parent.this, safe_school_list.class);
+                //startActivity(intent);
+                Intent intent = new Intent(Mainpage_parent.this, t2.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function5) {
                 Intent intent = new Intent(Mainpage_parent.this, Activity_Matk_Mainpage.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function6) {
-                Intent intent = new Intent(Mainpage_parent.this, Activity_Remark.class);
+                //Intent intent = new Intent(Mainpage_parent.this, Activity_Remark.class);
+                //startActivity(intent);
+                Intent intent = new Intent(Mainpage_parent.this, t3.class);
                 startActivity(intent);
             } else if (V.getId() == R.id.Activity_Parent_Mainpage_ImageView_Function7) {
                 Intent intent = new Intent(Mainpage_parent.this, education_news_main_others.class);
