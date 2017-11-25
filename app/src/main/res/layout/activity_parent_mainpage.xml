@@ -111,7 +111,7 @@
                         android:layout_gravity="center"
                         android:id="@+id/Activity_Parent_Mainpage_TextView_Function2"
                         android:textColor="@color/black"
-                        android:text="教室监控" />
+                        android:text="情绪监控" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -210,7 +210,7 @@
                         android:textColor="@color/black"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="评语" />
+                        android:text="每日统计" />
                 </LinearLayout>
             </LinearLayout>
 

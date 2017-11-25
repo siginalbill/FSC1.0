@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNews"
             android:layout_marginLeft="10dp"
-            android:text="欢迎您使用华迪家校通"
+            android:text="欢迎您使用"
             android:textColor="@color/black"
             android:textSize="18dp" />
 

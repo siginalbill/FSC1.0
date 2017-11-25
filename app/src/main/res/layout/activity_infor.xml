@@ -45,7 +45,7 @@
       android:layout_gravity="center"
       android:textColor="@color/black"
       android:textSize="20dp"
-        android:text="点击上传头像"
+        android:text="点击上传子女头像"
         android:id="@+id/textView_updataimg"/>
 
     <ImageView
